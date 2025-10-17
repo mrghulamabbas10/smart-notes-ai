@@ -3,52 +3,11 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export default function AskAI() {
+export default function AIPage() {
   const [isListening, setIsListening] = useState(true);
-
-  const transcriptEntries = [
-    {
-      text: "Hi, this is Mati Speaking. How are you doing today?",
-      time: "23:48",
-      opacity: "opacity-75",
-    },
-    {
-      text: "Hi, this is Mati Speaking. How are you doing today?",
-      time: "",
-      opacity: "opacity-30",
-    },
-    {
-      text: "Hi, this is Mati Speaking. How are you doing today?",
-      time: "",
-      opacity: "opacity-30",
-    },
-  ];
 
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 flex-1 flex flex-col">
-      <div className="mb-8 lg:mb-12">
-        <h1 className="text-[21px] font-normal mb-6 leading-normal">
-          Transcript
-        </h1>
-
-        <div className="space-y-[11px]">
-          {transcriptEntries.map((entry, index) => (
-            <div key={index} className="flex items-start justify-between gap-4">
-              <p
-                className={`text-base ${entry.opacity} tracking-[-0.16px] flex-1 leading-normal`}
-              >
-                {entry.text}
-              </p>
-              {entry.time && (
-                <span className="text-base opacity-50 tracking-[-0.16px] whitespace-nowrap leading-normal">
-                  {entry.time}
-                </span>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-
       <div className="flex-1 flex flex-col items-center justify-center relative pb-8">
         <div className="relative w-full max-w-md aspect-square flex items-center justify-center mb-8 sm:mb-12">
           <div className="absolute inset-0 flex items-center justify-center">
@@ -60,16 +19,16 @@ export default function AskAI() {
               }}
             />
           </div>
-         <div className="border-2 border-white rounded-full z-20 relative">
-             <Image
-            src="/images/ai.gif"
-            alt="ai"
-            width={280}
-            height={280}
-            className="w-[280px] h-[280px]"
-            unoptimized
-          />
-         </div>
+          <div className="border-2 border-white rounded-full z-20 relative">
+            <Image
+              src="/images/ai.gif"
+              alt="ai"
+              width={280}
+              height={280}
+              className="w-[280px] h-[280px]"
+              unoptimized
+            />
+          </div>
         </div>
 
         <p className="text-center text-[15px] text-[#474747] font-medium leading-[26px] max-w-[325px] mb-8 px-4">

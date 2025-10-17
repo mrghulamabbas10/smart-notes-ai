@@ -4,8 +4,16 @@ import { FiMenu } from "react-icons/fi";
 import UsersIcon from "../assets/users";
 
 import { LuBrain, LuLayoutDashboard } from "react-icons/lu";
+import { useRouter } from "next/navigation";
 
 export function BottomNav({ onEncountersClick }) {
+
+  const router = useRouter()
+
+  const handleClickNewEncounter = () => {
+    router.push("/");
+  };
+
   return (
     <div>
       <div className="lg:hidden w-[91%] mx-auto fixed bottom-2 rounded-3xl left-1/2 -translate-x-1/2 right-0 bg-white px-4 py-3 z-40">
@@ -22,7 +30,10 @@ export function BottomNav({ onEncountersClick }) {
           <NavItem icon={<FiMenu />} label="Menu" />
         </div>
 
-        <button className="absolute left-1/2 -translate-x-1/2 -top-5 w-16 h-16 border-4 border-white bg-primary shadow-primary rounded-full flex items-center justify-center shadow-lg hover:bg-primary/90 transition-colors">
+        <button
+          onClick={handleClickNewEncounter}
+          className="absolute left-1/2 -translate-x-1/2 -top-5 w-16 h-16 border-4 border-white bg-primary shadow-primary rounded-full flex items-center justify-center shadow-lg hover:bg-primary/90 transition-colors"
+        >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="white" />
           </svg>
