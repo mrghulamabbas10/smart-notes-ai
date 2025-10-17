@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #3c82f5;
+  --color-primary-light: #a8e7fb;
+  --color-success: #35d59a;
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Medical theme colors */
+  --color-medical-blue: #3c82f3;
+  --color-medical-green: #35d59a;
+  --color-medical-light-blue: #dfedf6;
+  --color-medical-gray-50: #fafafa;
+  --color-medical-gray-100: #f3f3f3;
+  --color-medical-gray-200: #f4f4f4;
+  --color-medical-gray-300: #eeeeee;
+  --color-medical-gray-400: #dadada;
+  --color-medical-gray-500: #989898;
+  --color-medical-gray-600: #616566;
+
+  /* 🔹 Common Neutrals */
+  --color-medical-gray: #616566;
+  --color-medical-lightgray: #fafafa;
+  --color-medical-border: #eee;
+  --color-medical-divider: #e3e3e3;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 4px;  
+}
+
+::-webkit-scrollbar-track {
+  background: #3c82f5; 
+  border-radius: 4px;
+}
