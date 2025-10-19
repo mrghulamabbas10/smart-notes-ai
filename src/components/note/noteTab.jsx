@@ -18,9 +18,7 @@ export default function NoteTab() {
             <span className="font-medium">Other Templates</span>
             <ChevronDown className="h-3 w-3" />
           </button>
-          <button className="flex h-[33px] items-center gap-2 rounded-[26px] border border-medical-gray-400 px-4 text-xs text-medical-gray-600 transition-all hover:bg-medical-gray-50">
-            <span className="font-medium">Regenerate</span>
-          </button>
+         
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
@@ -49,9 +47,9 @@ export default function NoteTab() {
 
       <div className="mb-8 flex items-center justify-between">
         <h2 className="text-lg font-medium text-black">Progress Note</h2>
-        <button className="flex h-[41px] items-center justify-center rounded-[30px] border border-black/10 bg-medical-blue px-6 text-sm font-semibold text-white transition-all hover:bg-medical-blue/90">
-          Integrate Now
-        </button>
+           <button className="flex h-[41px] items-center justify-center rounded-[30px] border border-black/10 bg-medical-blue px-6 text-sm font-semibold text-white transition-all hover:bg-medical-blue/90">
+              Integrate Now
+            </button>
       </div>
 
       <div className="prose prose-sm max-w-none">
@@ -96,13 +94,18 @@ export default function NoteTab() {
             No surgical history was provided.
           </div>
 
-          <div>
-            <span className="font-bold text-[#343434]">
-              Hospitalizations/Major Procedures:
-            </span>
-            <br />
-            There were no significant hospitalizations or major medical
-            procedures reported.
+          <div className="flex items-center gap-4 justify-between">
+            <div>
+              <span className="font-bold text-[#343434]">
+                Hospitalizations/Major Procedures:
+              </span>
+              <br />
+              There were no significant hospitalizations or major medical
+              procedures reported.
+            </div>
+            <button className="flex h-[33px] items-center gap-2 rounded-[26px] border border-medical-gray-400 px-4 text-xs text-medical-gray-600 transition-all hover:bg-medical-gray-50">
+            <span className="font-medium">Regenerate</span>
+          </button>
           </div>
         </div>
       </div>

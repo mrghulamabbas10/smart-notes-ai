@@ -5,7 +5,7 @@ import { BsStars } from "react-icons/bs";
 
 export default function RightSidebar() {
   return (
-    <div className="hidden lg:flex fixed right-0 top-[76px] bottom-0 w-[88px] flex-col items-center pt-8 pb-8 z-30">
+    <div className="hidden lg:flex fixed right-0 bottom-[76px] w-[88px] flex-col items-center pt-8 pb-8 z-30">
       <div className="flex flex-col items-center gap-6">
         <div className="flex flex-col items-center">
           <button className="w-[43px] h-[43px] rounded-full bg-white border border-gray-200 shadow-lg flex items-center justify-center hover:shadow-xl transition-shadow mb-2">
@@ -50,15 +50,7 @@ export default function RightSidebar() {
                 "#50D7B9",
                 "#40E599",
                 "#4DE3A3",
-                "#55DCA7",
-                "#6DD7B3",
-                "#68D8B9",
-                "#6ED4BD",
-                "#73D7CA",
-                "#93D5D6",
-                "#84CED5",
-                "#93D5D6",
-                "#8DBFDE",
+                "#55DCA7", 
               ];
               return (
                 <div

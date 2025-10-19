@@ -34,9 +34,6 @@ export default function BillingTab() {
               <span>Other Templates</span>
               <ChevronDown className="w-3 h-3" />
             </button>
-            <button className="px-5 py-2 rounded-full bg-medical-light-blue text-medical-gray text-xs font-medium hover:bg-opacity-80 transition-colors">
-              Push to EHR
-            </button>
           </div>
 
           <div className="flex items-center gap-2 flex-wrap">
@@ -65,9 +62,6 @@ export default function BillingTab() {
           <h1 className="text-[17px] font-medium text-black">
             Primary Diagnosis
           </h1>
-          <button className="px-7 py-2.5 rounded-full bg-medical-blue text-white text-[13px] font-semibold hover:bg-opacity-90 transition-colors border border-black/10">
-            Integrate Now
-          </button>
         </div>
 
         <div className="space-y-2">

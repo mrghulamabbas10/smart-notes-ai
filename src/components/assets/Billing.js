@@ -7,8 +7,7 @@ export default function BillingIcon({activeTab}) {
       height="15"
       viewBox="0 0 12 15"
       fill={activeTab === "billing" ? "black" : "black"}
-      xmlns="http://www.w3.org/2000/svg"
-      className={activeTab === "billing" ? "" : "opacity-24"}
+      xmlns="http://www.w3.org/2000/svg" 
     >
       <path
         opacity="0.24"

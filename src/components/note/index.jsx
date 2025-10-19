@@ -11,7 +11,7 @@ export default function Note() {
   const [activeTab, setActiveTab] = useState("note");
 
   return (
-    <div className="mx-auto w-[729px]">
+    <div className="w-[729px]">
       <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2 text-lg">
           <span className="font-medium text-black">Patient Name :</span>
@@ -26,8 +26,8 @@ export default function Note() {
           onClick={() => setActiveTab("note")}
           className={`flex h-24 pb-8 items-center justify-center gap-2 rounded-t-2xl md:px-6 px-3 transition-all ${
             activeTab === "note"
-              ? "bg-medical-green text-white shadow-lg"
-              : "bg-medical-gray-100 text-medical-gray-500"
+              ? "bg-primary text-white shadow-lg"
+              : "bg-medical-gray-100"
           }`}
         >
           <div
@@ -46,8 +46,8 @@ export default function Note() {
           onClick={() => setActiveTab("billing")}
           className={`flex h-24 pb-8 items-center justify-center gap-2 rounded-t-2xl md:px-6 px-3 transition-all ${
             activeTab === "billing"
-              ? "bg-medical-green text-white shadow-lg"
-              : "bg-medical-gray-100 text-medical-gray-500"
+              ? "bg-primary text-white shadow-lg"
+              : "bg-medical-gray-100"
           }`}
         >
           <div>
@@ -69,8 +69,8 @@ export default function Note() {
           onClick={() => setActiveTab("summary")}
           className={`flex h-24 pb-8 items-center justify-center gap-2 rounded-t-2xl md:px-6 px-3 transition-all ${
             activeTab === "summary"
-              ? "bg-medical-green text-white shadow-lg"
-              : "bg-medical-gray-100 text-medical-gray-500"
+              ? "bg-primary text-white shadow-lg"
+              : "bg-medical-gray-100"
           }`}
         >
           <div>

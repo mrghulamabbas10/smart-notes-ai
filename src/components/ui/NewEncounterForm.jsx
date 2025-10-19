@@ -44,11 +44,11 @@ export default function NewEncounterForm() {
     >
       {/* --- Header --- */}
       <div className="flex items-center justify-between gap-2 mb-10">
-        <div className="flex items-center relative bg-primary-light rounded-full p-1.5 lg:w-auto w-full">
+        <div className="flex items-center relative bg-primary-light rounded-full p-1.5 lg:w-auto w-fit">
           <button
             type="button"
             onClick={() => setPatientType("new")}
-            className={`text-[13px] lg:w-auto w-full text-nowrap py-2 px-5 rounded-full font-semibold transition-colors ${
+            className={`md:text-[13px] text-[10px] lg:w-auto md:w-full w-fit text-nowrap py-2 md:px-5 px-3 rounded-full font-semibold transition-colors ${
               patientType === "new"
                 ? "bg-white text-black"
                 : "text-black/45 bg-transparent"
@@ -59,7 +59,7 @@ export default function NewEncounterForm() {
           <button
             type="button"
             onClick={() => setPatientType("established")}
-            className={`text-[13px] lg:w-auto w-full text-nowrap py-2 px-5 rounded-full font-semibold transition-colors ${
+            className={`md:text-[13px] text-[10px] lg:w-auto md:w-full w-fit text-nowrap py-2 md:px-5 px-3 rounded-full font-semibold transition-colors ${
               patientType === "established"
                 ? "bg-white text-black"
                 : "text-black/45 bg-transparent"
@@ -82,9 +82,7 @@ export default function NewEncounterForm() {
               Patient Name <span className="text-red-500">*</span>
             </label>
             <div className="w-full h-[51px] rounded-full border border-black/6 flex items-center px-4">
-              <div className="w-[38px] h-[38px] rounded-full bg-success flex items-center justify-center flex-shrink-0">
-                <UserIcon />
-              </div>
+              <UserIcon />
               <input
                 type="text"
                 value={patientName}
@@ -104,10 +102,8 @@ export default function NewEncounterForm() {
               Date of Birth
             </label>
             <div className="relative">
-              <div className="w-full h-[51px] rounded-full border border-black/6 flex items-center px-4">
-                <div className="w-[38px] h-[38px] rounded-full bg-success flex items-center justify-center flex-shrink-0">
-                  <DateIcon />
-                </div>
+              <div className="w-full h-[51px]  rounded-full border border-black/6 flex items-center px-4">
+                <DateIcon />
                 <input
                   type="date"
                   value={dob}
@@ -126,34 +122,25 @@ export default function NewEncounterForm() {
             Patient Context or History (Optional)
           </label>
           <div className="w-full min-h-[119px] rounded-[20px] border border-black/6 p-4 flex items-start">
-            <div className="w-[38px] h-[38px] rounded-full bg-success flex items-center justify-center flex-shrink-0">
-              <FileIcon />
-            </div>
+            <FileIcon />
             <textarea
               value={context}
               onChange={(e) => setContext(e.target.value)}
               placeholder="e.g. Patient 1"
-              className="flex-1 ml-4 mt-2 text-[15px] font-medium text-black placeholder:text-black/40 outline-none bg-transparent resize-none min-h-[80px]"
+              className="flex-1 ml-4 text-[15px] font-medium text-black placeholder:text-black/40 outline-none bg-transparent resize-none min-h-[80px]"
             />
-            <button
-              type="button"
-              className="flex-shrink-0 ml-2 text-black/30 hover:text-black transition-colors"
-            >
-              <MicIcon />
-            </button>
+
+            <MicIcon />
           </div>
         </div>
 
         {/* Encounter Type */}
-        <div>
-          <label className="block text-sm font-semibold text-black/70 mb-3">
-            Encounter Type <span className="text-red-500">*</span>
-          </label>
-          <div className="relative w-full h-12 rounded-[35px] bg-gray-100 flex items-center gap-5 px-3">
+        <div className="w-[70%] mx-auto"> 
+          <div className="relative h-12 rounded-[35px] bg-gray-100 flex items-center gap-5 px-3">
             <button
               type="button"
               onClick={() => setEncounterType("office")}
-              className={`flex-1 text-[15px] text-nowrap w-full px-8 md:py-1 py-2 font-medium z-10 rounded-[35px] transition-all ${
+              className={`flex-1 text-[15px] text-nowrap w-full px-8 md:py-2 py-2 font-medium z-10 rounded-[35px] transition-all ${
                 encounterType === "office"
                   ? "bg-white border border-primary shadow-lg text-black"
                   : "text-black/40 bg-transparent"
@@ -164,7 +151,7 @@ export default function NewEncounterForm() {
             <button
               type="button"
               onClick={() => setEncounterType("tele")}
-              className={`flex-1 text-[15px] text-nowrap w-full px-8 md:py-1 py-2 font-medium z-10 rounded-[35px] transition-all ${
+              className={`flex-1 text-[15px] text-nowrap w-full px-8 md:py-2 py-2 font-medium z-10 rounded-[35px] transition-all ${
                 encounterType === "tele"
                   ? "bg-white border border-primary shadow-lg text-black"
                   : "text-black/40 bg-transparent"

@@ -25,14 +25,14 @@ export default function LanguageSelector() {
     <div className="relative" ref={ref}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="lg:flex hidden items-center gap-2 px-4 py-2 rounded-[26px] border border-[#DADADA]"
+        className="flex items-center gap-2 px-4 py-2 rounded-[26px] border border-[#DADADA]"
       >
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/8bf04b8e848942e5a16ad98bdd97760fd874ccad?width=56"
           alt="United Kingdom"
-          className="w-7 h-7 rounded-full"
+          className="w-5 h-5 rounded-full"
         />
-        <span className="text-[15px] font-medium text-gray-500">EN</span>
+        <span className="text-[12px] font-medium text-gray-500">EN</span>
         <IoChevronDown />
       </button>
 

@@ -78,7 +78,7 @@ export default function AskAI() {
             : "Recording paused. Click Resume to continue."}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full px-4">
+        <div className="flex gap-4 items-center justify-center w-full px-4">
           <button
             onClick={() => setIsListening(!isListening)}
             className="w-full sm:w-auto min-w-[158px] h-[49px] rounded-[30px] bg-[#3C82F3] border border-black/10 text-white text-[15px] font-semibold flex items-center justify-center gap-2 hover:bg-[#3574e0] transition-colors shadow-sm"
@@ -98,7 +98,7 @@ export default function AskAI() {
                 fill="white"
               />
             </svg>
-            Resume
+            {isListening ? "Pause" : "Resume"} 
           </button>
 
           <button className="w-full sm:w-auto min-w-[158px] h-[49px] rounded-[26px] bg-[#EF4444] text-white text-[15px] font-medium flex items-center justify-center gap-2 hover:bg-[#dc2626] transition-colors shadow-sm">

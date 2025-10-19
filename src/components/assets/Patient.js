@@ -7,8 +7,7 @@ export default function Patienticon({activeTab}) {
       height="15"
       viewBox="0 0 12 15"
       fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-      className={activeTab === "summary" ? "" : "opacity-24"}
+      xmlns="http://www.w3.org/2000/svg" 
     >
       <g opacity="0.24">
         <path

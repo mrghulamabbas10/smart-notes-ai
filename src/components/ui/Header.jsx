@@ -27,7 +27,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 md:left-[300px] right-0 h-[76px] z-30 ">
       {/* Desktop Header */}
-      <div className="h-full md:flex hidden items-center gap-8 pl-10">
+      <div className="h-full md:flex hidden items-center justify-between gap-8 pl-10">
         <nav className="flex items-center gap-2 md:gap-4 overflow-x-auto scrollbar-hide bg-white rounded-full">
           {navItems.map((item) => (
             <button
