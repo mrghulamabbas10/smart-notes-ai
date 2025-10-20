@@ -6,6 +6,15 @@ import { useState } from "react";
 export default function AskAI() {
   const [isListening, setIsListening] = useState(true);
 
+    // play → pause → resume
+  const [status, setStatus] = useState("play");
+
+  const handleClick = () => {
+    if (status === "play") setStatus("pause");
+    else if (status === "pause") setStatus("resume");
+    else setStatus("pause");
+  };
+
   const transcriptEntries = [
     {
       text: "Hi, this is Mati Speaking. How are you doing today?",
@@ -80,45 +89,68 @@ export default function AskAI() {
 
         <div className="flex gap-4 items-center justify-center w-full px-4">
           <button
-            onClick={() => setIsListening(!isListening)}
+            onClick={handleClick}
             className="w-full sm:w-auto min-w-[158px] h-[49px] rounded-[30px] bg-[#3C82F3] border border-black/10 text-white text-[15px] font-semibold flex items-center justify-center gap-2 hover:bg-[#3574e0] transition-colors shadow-sm"
           >
-            {isListening ? (
-              <svg
-                width="11"
-                height="11"
-                viewBox="0 0 11 11"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="flex-shrink-0"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M9.94754 6.06248C10.2899 5.87886 10.5033 5.52216 10.503 5.13387C10.503 4.74557 10.2892 4.38886 9.94649 4.2056C8.01624 3.17271 4.1652 1.1122 2.3192 0.124602C1.99269 -0.0502382 1.59877 -0.040411 1.28104 0.149876C0.963312 0.340164 0.769165 0.683177 0.769165 1.05322C0.769165 3.07651 0.769165 7.20175 0.769165 9.2261C0.769165 9.59684 0.963665 9.93985 1.2814 10.1301C1.59948 10.3204 1.99374 10.3295 2.32025 10.1544L9.94754 6.06248ZM9.61577 5.44387L1.98848 9.53575C1.87964 9.59403 1.74798 9.59087 1.64196 9.52768C1.53628 9.46413 1.47133 9.34968 1.47133 9.2261V1.05322C1.47133 0.929989 1.53593 0.815535 1.64196 0.751989C1.74763 0.688794 1.87929 0.685633 1.98813 0.743562L9.61542 4.82491C9.72952 4.886 9.80079 5.00466 9.80079 5.13421C9.80079 5.26341 9.72987 5.38243 9.61577 5.44387Z"
-                  fill="white"
-                />
-              </svg>
-            ) : (
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                stroke-width="0"
-                viewBox="0 0 24 24"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="Pause_1">
+            {status === "play" ? (
+              <>
+                {/* ▶ Play Icon */}
+                <svg
+                  width="11"
+                  height="11"
+                  viewBox="0 0 11 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="flex-shrink-0"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M9.94754 6.06248C10.2899 5.87886 10.5033 5.52216 10.503 5.13387C10.503 4.74557 10.2892 4.38886 9.94649 4.2056C8.01624 3.17271 4.1652 1.1122 2.3192 0.124602C1.99269 -0.0502382 1.59877 -0.040411 1.28104 0.149876C0.963312 0.340164 0.769165 0.683177 0.769165 1.05322V9.2261C0.769165 9.59684 0.963665 9.93985 1.2814 10.1301C1.59948 10.3204 1.99374 10.3295 2.32025 10.1544L9.94754 6.06248Z"
+                    fill="white"
+                  />
+                </svg>
+                Play
+              </>
+            ) : status === "pause" ? (
+              <>
+                {/* ⏸ Pause Icon */}
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <g>
                     <path d="M8.25,21.937H6.564a2.5,2.5,0,0,1-2.5-2.5V4.563a2.5,2.5,0,0,1,2.5-2.5H8.25a2.5,2.5,0,0,1,2.5,2.5V19.437A2.5,2.5,0,0,1,8.25,21.937ZM6.564,3.063a1.5,1.5,0,0,0-1.5,1.5V19.437a1.5,1.5,0,0,0,1.5,1.5H8.25a1.5,1.5,0,0,0,1.5-1.5V4.563a1.5,1.5,0,0,0-1.5-1.5Z"></path>
                     <path d="M17.436,21.937H15.75a2.5,2.5,0,0,1-2.5-2.5V4.563a2.5,2.5,0,0,1,2.5-2.5h1.686a2.5,2.5,0,0,1,2.5,2.5V19.437A2.5,2.5,0,0,1,17.436,21.937ZM15.75,3.063a1.5,1.5,0,0,0-1.5,1.5V19.437a1.5,1.5,0,0,0,1.5,1.5h1.686a1.5,1.5,0,0,0,1.5-1.5V4.563a1.5,1.5,0,0,0-1.5-1.5Z"></path>
                   </g>
-                </g>
-              </svg>
+                </svg>
+                Pause
+              </>
+            ) : (
+              <>
+                {/* 🔁 Resume Icon */}
+                <svg
+                  width="11"
+                  height="11"
+                  viewBox="0 0 11 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="flex-shrink-0"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M9.94754 6.06248C10.2899 5.87886 10.5033 5.52216 10.503 5.13387C10.503 4.74557 10.2892 4.38886 9.94649 4.2056C8.01624 3.17271 4.1652 1.1122 2.3192 0.124602C1.99269 -0.0502382 1.59877 -0.040411 1.28104 0.149876C0.963312 0.340164 0.769165 0.683177 0.769165 1.05322V9.2261C0.769165 9.59684 0.963665 9.93985 1.2814 10.1301C1.59948 10.3204 1.99374 10.3295 2.32025 10.1544L9.94754 6.06248Z"
+                    fill="white"
+                  />
+                </svg>
+                Resume
+              </>
             )}
-
-            {isListening ? "Play" : "Pause"}
           </button>
 
           <button className="w-full sm:w-auto min-w-[158px] h-[49px] rounded-[26px] bg-[#EF4444] text-white text-[15px] font-medium flex items-center justify-center gap-2 hover:bg-[#dc2626] transition-colors shadow-sm">

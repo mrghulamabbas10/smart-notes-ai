@@ -6,12 +6,13 @@ import BillingIcon from "../assets/Billing";
 import Patienticon from "../assets/Patient";
 import NoteTab from "./noteTab";
 import BillingTab from "./BillingTab";
+import SummryTab from "./SummaryTab";
 
 export default function Note() {
   const [activeTab, setActiveTab] = useState("note");
 
   return (
-    <div className="w-[729px]">
+    <div className="w-[85%]">
       <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2 text-lg">
           <span className="font-medium text-black">Patient Name :</span>
@@ -89,7 +90,7 @@ export default function Note() {
 
       {activeTab === "note" && <NoteTab />}
       {activeTab === "billing" && <BillingTab />}
-      {activeTab === "summary" && <NoteTab />}
+      {activeTab === "summary" && <SummryTab />}
     </div>
   );
 }
