@@ -48,7 +48,7 @@ export default function NewEncounterForm() {
           <button
             type="button"
             onClick={() => setPatientType("new")}
-            className={`md:text-[13px] text-[10px] lg:w-auto md:w-full w-fit text-nowrap py-2 md:px-5 px-3 rounded-full font-semibold transition-colors ${
+            className={`md:text-[13px] text-[9px] lg:w-auto md:w-full w-fit text-nowrap py-2 md:px-5 px-2 rounded-full font-semibold transition-colors ${
               patientType === "new"
                 ? "bg-white text-black"
                 : "text-black/45 bg-transparent"
@@ -59,7 +59,7 @@ export default function NewEncounterForm() {
           <button
             type="button"
             onClick={() => setPatientType("established")}
-            className={`md:text-[13px] text-[10px] lg:w-auto md:w-full w-fit text-nowrap py-2 md:px-5 px-3 rounded-full font-semibold transition-colors ${
+            className={`md:text-[13px] text-[9px] lg:w-auto md:w-full w-fit text-nowrap py-2 md:px-5 px-2 rounded-full font-semibold transition-colors ${
               patientType === "established"
                 ? "bg-white text-black"
                 : "text-black/45 bg-transparent"
@@ -122,7 +122,9 @@ export default function NewEncounterForm() {
             Patient Context or History (Optional)
           </label>
           <div className="w-full min-h-[119px] rounded-[20px] border border-black/6 p-4 flex items-start">
-            <FileIcon />
+           <div className="mt-1.5">
+             <FileIcon />
+           </div>
             <textarea
               value={context}
               onChange={(e) => setContext(e.target.value)}

@@ -27,13 +27,13 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 md:left-[300px] right-0 h-[76px] z-30 ">
       {/* Desktop Header */}
-      <div className="h-full md:flex hidden items-center justify-between gap-8 pl-10">
+      <div className="h-full  md:flex hidden items-center justify-between gap-8 pl-10">
         <nav className="flex items-center gap-2 md:gap-4 overflow-x-auto scrollbar-hide bg-white rounded-full">
           {navItems.map((item) => (
             <button
               key={item.name}
               onClick={() => setActiveTab(item.name)}
-              className={`px-2 py-1 rounded-full text-[12px] text-nowrap font-medium flex items-center gap-1.5 transition-colors ${
+              className={`px-2 py-1 rounded-full 2xl:text-base text-[12px] text-nowrap font-medium flex items-center gap-1.5 transition-colors ${
                 activeTab === item.name
                   ? "bg-primary-light text-black font-semibold"
                   : "text-gray-500 hover:text-black"

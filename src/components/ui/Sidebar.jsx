@@ -62,7 +62,7 @@ export default function Sidebar({ isOpen, onClose }) {
       )}
 
       <div
-        className={`fixed top-0 bottom-0 left-0 md:w-[300px] w-[250px] z-40 flex-col transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 bottom-0 left-0 md:w-[300px] w-[230px] z-40 flex-col transition-transform duration-300 ease-in-out ${
           isOpen
             ? "flex translate-x-5 mt-2 rounded-2xl bg-white pt-4 pb-6 h-[85%]"
             : "hidden -translate-x-full pt-8 pb-6"
