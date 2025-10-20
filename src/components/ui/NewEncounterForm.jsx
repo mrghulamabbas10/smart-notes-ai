@@ -137,12 +137,12 @@ export default function NewEncounterForm() {
         </div>
 
         {/* Encounter Type */}
-        <div className="w-[70%] mx-auto"> 
-          <div className="relative h-12 rounded-[35px] bg-gray-100 flex items-center gap-5 px-3">
+        <div className="w-[80%] mx-auto"> 
+          <div className="relative h-12 rounded-[35px] bg-gray-100 flex items-center md:gap-5 gap-3 px-3">
             <button
               type="button"
               onClick={() => setEncounterType("office")}
-              className={`flex-1 text-[15px] text-nowrap w-full px-8 md:py-2 py-2 font-medium z-10 rounded-[35px] transition-all ${
+              className={`flex-1 text-[15px] text-nowrap w-full md:px-8 px-3 md:py-2 py-2 font-medium z-10 rounded-[35px] transition-all ${
                 encounterType === "office"
                   ? "bg-white border border-primary shadow-lg text-black"
                   : "text-black/40 bg-transparent"
@@ -153,7 +153,7 @@ export default function NewEncounterForm() {
             <button
               type="button"
               onClick={() => setEncounterType("tele")}
-              className={`flex-1 text-[15px] text-nowrap w-full px-8 md:py-2 py-2 font-medium z-10 rounded-[35px] transition-all ${
+              className={`flex-1 text-[15px] text-nowrap w-full md:px-8 px-3 md:py-2 py-2 font-medium z-10 rounded-[35px] transition-all ${
                 encounterType === "tele"
                   ? "bg-white border border-primary shadow-lg text-black"
                   : "text-black/40 bg-transparent"
