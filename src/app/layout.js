@@ -1,13 +1,5 @@
 import { Urbanist } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/ui/Header";
-import Sidebar from "@/components/ui/Sidebar";
-import RightSidebar from "@/components/ui/RightSidebar";
-import { BottomNav } from "@/components/ui/BottomNav";
-import Link from "next/link";
-import { BsStars } from "react-icons/bs";
-import { AIButton } from "@/components/ui/AIButton";
-import MainLayout from "@/components/ui/MainLayout";
+import "./globals.css"; 
 
 const urbanist = Urbanist({
   variable: "--font-urbanist",
@@ -22,9 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${urbanist.className} antialiased`}>
-        <MainLayout>{children}</MainLayout>
-      </body>
+      <body className={`${urbanist.className} antialiased`}>{children}</body>
     </html>
   );
 }

@@ -49,8 +49,7 @@ button {
 }
 
 @media screen and (max-width: 600px) {
-  body,
-  html {
+  body {
     overflow-x: hidden;
   }
 }
