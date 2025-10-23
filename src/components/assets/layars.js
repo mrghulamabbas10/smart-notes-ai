@@ -3,7 +3,7 @@ import React from "react";
 export default function Layars() {
   return (
     <svg
-      className="absolute inset-0 w-full h-full"
+      className="absolute inset-0 w-full h-full md:block hidden"
       viewBox="0 0 1136 500"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
