@@ -1,8 +1,30 @@
+"use client";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import Brands from "./Brands";
 import Header from "./Header";
 
 export default function Hero() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  // Scroll-based scaling for hero image
+  const scale = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
+  // Reusable fade-up animation variant
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40, filter: "blur(8px)" },
+    visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.8, ease: "easeOut" } },
+  };
+
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-br from-[#EFF9FF] via-[#EFF9FF] to-[#FFF9EF]">
+    <section
+      ref={ref}
+      className="relative w-full overflow-hidden bg-gradient-to-br from-[#EFF9FF] via-[#EFF9FF] to-[#FFF9EF]"
+    >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -16,71 +38,101 @@ export default function Hero() {
       <Header />
 
       {/* Hero Content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-4 md:py-20 py-10 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 md:pt-20 pt-10 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
-          {/* Main Heading with Icons */}
-          <h1 className="text-center lg:text-5xl text-4xl font-bold leading-tight text-[#00234B] sm:text-6xl lg:text-[92px]">
+          {/* Heading */}
+          <motion.h1
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            className="text-center lg:text-5xl text-4xl font-bold leading-tight text-[#00234B] sm:text-6xl lg:text-[92px]"
+          >
             Transforming Clinical
-          </h1>
+          </motion.h1>
 
-          <div className="relative mb-8 flex flex-wrap items-center justify-center gap-4">
-            <img
-              src="/images/text-icon-1.png?width=252"
+          {/* Icon Row */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.3 }}
+            className="relative mb-8 flex flex-wrap items-center justify-center gap-4"
+          >
+            <motion.img
+              src="/images/text-icon-1.png"
               alt="Document icon"
               className="h-10 w-10 sm:h-24 sm:w-24 lg:h-32 lg:w-32"
+              animate={{ x: [0, 20, 0] }}
+              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
             />
-            <h1 className=" lg:text-5xl text-4xl font-bold leading-tight text-[#00234B] sm:text-6xl lg:text-[92px]">
-              Notes
-            </h1>
-            <h1 className=" lg:text-5xl text-4xl font-bold leading-tight text-[#00234B] sm:text-6xl lg:text-[92px]">
-              with
-            </h1>
-            <img
-              src="/images/text-icon-2.png?width=266"
+            <h1 className="lg:text-5xl text-4xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">Notes</h1>
+            <h1 className="lg:text-5xl text-4xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">with</h1>
+            <motion.img
+              src="/images/text-icon-2.png"
               alt="AI icon"
               className="h-10 w-10 sm:h-24 sm:w-24 lg:h-32 lg:w-32 md:block hidden"
+              animate={{ x: [0, -20, 0] }}
+              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
             />
-            <h1 className=" lg:text-5xl text-3xl font-bold leading-tight text-[#00234B] sm:text-6xl lg:text-[92px]">
-              AI
-            </h1>
-          </div>
+            <h1 className="lg:text-5xl text-3xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">AI</h1>
+          </motion.div>
 
           {/* Description */}
-          <p className="mx-auto mb-12 max-w-3xl  text-base text-[#464E68] sm:text-lg lg:text-xl">
-            SmartNotes AI instantly transforms patient visits into structured
-            SOAP Notes, patient summaries, billing codes, and comprehensive
-            documentation — all HIPAA-compliant and EMR-integrated.
-          </p>
+          <motion.p
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.5 }}
+            className="mx-auto mb-12 max-w-3xl text-base text-[#464E68] sm:text-lg lg:text-xl"
+          >
+            SmartNotes AI instantly transforms patient visits into structured SOAP Notes, patient summaries, billing codes, and comprehensive documentation — all HIPAA-compliant and EMR-integrated.
+          </motion.p>
 
           {/* CTA Buttons */}
-          <div className="flex items-center gap-4">
-            <button className="group relative overflow-hidden rounded-full bg-gradient-to-r from-[#BAD3FF] to-[#1457EA] px-8 py-4  text-base font-semibold text-white shadow-lg transition hover:shadow-xl">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.7 }}
+            className="flex items-center gap-4"
+          >
+            <button className="group relative overflow-hidden rounded-full bg-gradient-to-r from-[#BAD3FF] to-[#1457EA] px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:shadow-xl">
               <div className="absolute inset-0 -z-10 rounded-full bg-[#4188FF] opacity-50 blur-xl"></div>
               Try it for Free
             </button>
-            <button className="glassmorphic-light rounded-full border border-white px-8 py-4  text-base font-semibold text-[#1457EA] transition hover:bg-white/80">
+            <button className="glassmorphic-light rounded-full border border-white px-8 py-4 text-base font-semibold text-[#1457EA] transition hover:bg-white/80">
               Login
             </button>
-          </div>
+          </motion.div>
 
-          {/* Annotations */}
-          <div className="absolute z-10 left-10 top-[80%] hidden transform lg:block">
+          {/* Flipping arrows */}
+          <motion.div
+            animate={{ rotateY: [0, 180, 360] }} 
+            className="absolute z-10 left-10 top-[100%] hidden lg:block"
+          >
             <img src="/images/left-arrow.png" alt="" className="w-[13vw]" />
-          </div>
+          </motion.div>
 
-          <div className="absolute z-10 right-10 top-[90%] hidden transform lg:block">
+          <motion.div
+            animate={{ rotateY: [0, 180, 360] }} 
+            className="absolute z-10 right-10 top-[100%] hidden lg:block"
+          >
             <img src="/images/right-arrow.png" alt="" className="w-[13vw]" />
-          </div>
+          </motion.div>
         </div>
       </div>
 
-      <div className="relative max-w-4xl mx-auto p-4">
+      {/* Scroll Scale Hero Image */}
+      <motion.div
+        style={{ scale }}
+        className="relative mx-auto p-4 md:-mt-32 -mt-0"
+      >
         <img
           src="/images/hero-main.png"
           alt="SmartNotes AI Interface Preview"
-          className="h-full w-full object-contain"
+          className="h-full w-full object-cover"
         />
-      </div>
+      </motion.div>
 
       {/* Partner Logos Section */}
       <div className="relative z-10 bg-gradient-to-t from-[#EFF9FF] to-transparent pb-16 pt-10 md:block hidden">
@@ -88,41 +140,10 @@ export default function Hero() {
           <h3 className="mb-12 text-center font-satoshi text-lg text-[#120A0B] sm:text-xl">
             Integrated by the world's most innovative teams
           </h3>
-
-          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 lg:gap-16">
-            <img
-              src="/images/brand1.png?width=287"
-              alt="NextGen"
-              className="h-6 opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
-            />
-            <img
-              src="/images/brand2.png?width=293"
-              alt="Athena Health"
-              className="h-5 opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
-            />
-            <img
-              src="/images/brand3.png?width=240"
-              alt="Practice Fusion"
-              className="h-4 opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
-            />
-            <img
-              src="/images/brand4.png?width=164"
-              alt="eClinicalWorks"
-              className="h-5 opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
-            />
-            <img
-              src="/images/brand5.png?width=154"
-              alt="Oracle Cerner"
-              className="h-6 opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
-            />
-            <img
-              src="/images/brand6.png?width=254"
-              alt="CareCloud"
-              className="h-8 opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
-            />
-          </div>
+          <Brands />
         </div>
       </div>
     </section>
   );
 }
+

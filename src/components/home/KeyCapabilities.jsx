@@ -6,7 +6,7 @@ export default function KeyCapabilities() {
       <div className="bg-[#EAF7FF] py-16 sm:py-24 lg:py-32 w-full ">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="mb-16 text-center">
+          {/* <div className="mb-16 text-center">
             <div className="inline-block rotate-12 rounded-2xl bg-[#2166FF] px-6 py-1 text-sm font-medium text-white">
               Core Offerings
             </div>
@@ -17,7 +17,7 @@ export default function KeyCapabilities() {
             <p className="mx-auto max-w-3xl font-urbanist text-lg font-medium text-[#717A7C]">
               Simplifying documentation so providers can focus on care.
             </p>
-          </div>
+          </div> */}
 
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
             {/* Documentation Tool */}
