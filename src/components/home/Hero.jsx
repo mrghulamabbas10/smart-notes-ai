@@ -50,7 +50,7 @@ export default function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="text-center md:text-5xl text-[11vw] md:leading-tight leading-[11vw] font-bold leading-tight text-[#00234B] sm:text-6xl lg:text-[92px]"
+            className="text-center md:text-5xl text-[11vw] md:leading-tight leading-[11vw] font-bold text-[#00234B] sm:text-6xl lg:text-[92px]"
           >
             Transforming Clinical
           </motion.h1>

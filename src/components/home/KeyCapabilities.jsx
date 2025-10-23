@@ -21,7 +21,7 @@ export default function KeyCapabilities() {
 
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
             {/* Documentation Tool */}
-            <div className="flex flex-col justify-center bg-[#EAF7FF] sticky top-20 z-0">
+            <div className="flex flex-col justify-center ">
               <div className="mb-6 w-fit rounded-full bg-white px-4 py-2">
                 <span className="font-urbanist text-base font-medium text-[#012025]">
                   Documentation Tool
@@ -45,7 +45,7 @@ export default function KeyCapabilities() {
               />
             </div>
             {/* Consult Notes */}
-            <div className="bg-[#EAF7FF] sticky top-20 z-0 flex flex-col justify-center">
+            <div className=" flex flex-col justify-center">
               <div className="mb-6 w-fit inline-block rounded-full bg-white px-4 py-2">
                 <span className="font-urbanist text-base font-medium text-[#012025]">
                   Consult Notes
@@ -104,7 +104,7 @@ export default function KeyCapabilities() {
               </div>
             </div>
             {/* Medical Billing */}
-            <div className="bg-[#EAF7FF] sticky top-20 z-0 flex flex-col justify-center">
+            <div className=" flex flex-col justify-center">
               <div className="mb-6 w-fit inline-block rounded-full bg-white px-4 py-2">
                 <span className="font-urbanist text-base font-medium text-[#012025]">
                   Medical Billing
@@ -191,7 +191,7 @@ export default function KeyCapabilities() {
             </div>
 
             {/* Visit Summary */}
-            <div className="bg-[#EAF7FF] sticky top-20 z-0 flex flex-col justify-center">
+            <div className=" flex flex-col justify-center">
               <div className="mb-6 w-fit inline-block rounded-full bg-white px-4 py-2">
                 <span className="font-urbanist text-base font-medium text-[#012025]">
                   Visit Summary
