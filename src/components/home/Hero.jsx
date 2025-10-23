@@ -12,7 +12,7 @@ export default function Hero() {
   });
 
   // Scroll-based scaling for hero image
-  const scale = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
   // Reusable fade-up animation variant
   const fadeUp = {
@@ -50,7 +50,7 @@ export default function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="text-center text-5xl font-bold leading-tight text-[#00234B] sm:text-6xl lg:text-[92px]"
+            className="text-center md:text-5xl text-3xl font-bold leading-tight text-[#00234B] sm:text-6xl lg:text-[92px]"
           >
             Transforming Clinical
           </motion.h1>
@@ -61,7 +61,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             transition={{ delay: 0.3 }}
-            className="relative mb-8 flex flex-wrap items-center justify-center gap-4"
+            className="relative md:mb-8 mb-5 flex flex-wrap items-center justify-center gap-4"
           >
             <motion.img
               src="/images/text-icon-1.png"
@@ -70,10 +70,10 @@ export default function Hero() {
               animate={{ x: [0, 20, 0] }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
             />
-            <h1 className="text-5xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">
+            <h1 className="md:text-5xl text-3xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">
               Notes
             </h1>
-            <h1 className="text-5xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">
+            <h1 className="md:text-5xl text-3xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">
               with
             </h1>
             <motion.img
@@ -83,7 +83,7 @@ export default function Hero() {
               animate={{ x: [0, -20, 0] }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
             />
-            <h1 className="text-5xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">
+            <h1 className="md:text-5xl text-3xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">
               AI
             </h1>
           </motion.div>
@@ -94,7 +94,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             transition={{ delay: 0.5 }}
-            className="mx-auto mb-12 max-w-3xl text-base text-[#464E68] sm:text-lg lg:text-xl"
+            className="mx-auto md:mb-12 mb-8 max-w-3xl text-[#464E68] text-sm  sm:text-lg lg:text-xl"
           >
             SmartNotes AI instantly transforms patient visits into structured
             SOAP Notes, patient summaries, billing codes, and comprehensive
