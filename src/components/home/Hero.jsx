@@ -79,7 +79,7 @@ export default function Hero() {
             <motion.img
               src="/images/text-icon-2.png"
               alt="AI icon"
-              className="h-10 w-10 sm:h-24 sm:w-24 lg:h-32 lg:w-32"
+              className="h-10 w-10 sm:h-24 sm:w-24 lg:h-32 lg:w-32 md:block hidden"
               animate={{ x: [0, -20, 0] }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
             />
