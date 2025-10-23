@@ -135,9 +135,9 @@ export default function Hero() {
       </motion.div>
 
       {/* Partner Logos Section */}
-      <div className="relative z-10 bg-gradient-to-t from-[#EFF9FF] to-transparent pb-16 pt-10 md:block hidden">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h3 className="mb-12 text-center font-satoshi text-lg text-[#120A0B] sm:text-xl">
+      <div className="relative z-10 bg-gradient-to-t from-[#EFF9FF] to-transparent md:pb-16 pb-8 pt-0">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
+          <h3 className="mb-12 text-center font-satoshi text-lg text-[#120A0B] sm:text-xl md:block hidden">
             Integrated by the world's most innovative teams
           </h3>
           <Brands />

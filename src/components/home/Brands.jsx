@@ -9,37 +9,37 @@ export default function Brands() {
         <img
           src="/images/brand1.png?width=287"
           alt="NextGen"
-          className="h-6 opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+          className="h-6 opacity-70 grayscale transition hover:opacity-100"
         />
         <img
           src="/images/brand2.png?width=293"
           alt="Athena Health"
-          className="h-5 opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+          className="h-5 opacity-70 grayscale transition hover:opacity-100"
         />
         <img
           src="/images/brand3.png?width=240"
           alt="Practice Fusion"
-          className="h-4 opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+          className="h-4 opacity-70 grayscale transition hover:opacity-100"
         />
         <img
           src="/images/brand4.png?width=164"
           alt="eClinicalWorks"
-          className="h-5 opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+          className="h-5 opacity-70 grayscale transition hover:opacity-100"
         />
         <img
           src="/images/brand5.png?width=154"
           alt="Oracle Cerner"
-          className="h-6 opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+          className="h-6 opacity-70 grayscale transition hover:opacity-100"
         />
         <img
           src="/images/brand6.png?width=254"
           alt="CareCloud"
-          className="h-8 opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+          className="h-8 opacity-70 grayscale transition hover:opacity-100"
         />
         <img
           src="/images/brand4.png?width=164"
           alt="eClinicalWorks"
-          className="h-5 opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+          className="h-5 opacity-70 grayscale transition hover:opacity-100"
         />
       </div>
     </Marquee>
