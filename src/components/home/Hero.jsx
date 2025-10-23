@@ -50,7 +50,7 @@ export default function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="text-center md:text-5xl text-3xl font-bold leading-tight text-[#00234B] sm:text-6xl lg:text-[92px]"
+            className="text-center md:text-5xl text-4xl font-bold leading-tight text-[#00234B] sm:text-6xl lg:text-[92px]"
           >
             Transforming Clinical
           </motion.h1>
@@ -70,10 +70,10 @@ export default function Hero() {
               animate={{ x: [0, 20, 0] }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
             />
-            <h1 className="md:text-5xl text-3xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">
+            <h1 className="md:text-5xl text-4xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">
               Notes
             </h1>
-            <h1 className="md:text-5xl text-3xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">
+            <h1 className="md:text-5xl text-4xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">
               with
             </h1>
             <motion.img
@@ -83,7 +83,7 @@ export default function Hero() {
               animate={{ x: [0, -20, 0] }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
             />
-            <h1 className="md:text-5xl text-3xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">
+            <h1 className="md:text-5xl text-4xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">
               AI
             </h1>
           </motion.div>
