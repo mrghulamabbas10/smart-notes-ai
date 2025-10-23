@@ -12,12 +12,17 @@ export default function Hero() {
   });
 
   // Scroll-based scaling for hero image
-  const scale = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
 
   // Reusable fade-up animation variant
   const fadeUp = {
     hidden: { opacity: 0, y: 40, filter: "blur(8px)" },
-    visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.8, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
   };
 
   return (
@@ -65,8 +70,12 @@ export default function Hero() {
               animate={{ x: [0, 20, 0] }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
             />
-            <h1 className="text-5xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">Notes</h1>
-            <h1 className="text-5xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">with</h1>
+            <h1 className="text-5xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">
+              Notes
+            </h1>
+            <h1 className="text-5xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">
+              with
+            </h1>
             <motion.img
               src="/images/text-icon-2.png"
               alt="AI icon"
@@ -74,7 +83,9 @@ export default function Hero() {
               animate={{ x: [0, -20, 0] }}
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
             />
-            <h1 className="text-5xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">AI</h1>
+            <h1 className="text-5xl font-bold text-[#00234B] sm:text-6xl lg:text-[92px]">
+              AI
+            </h1>
           </motion.div>
 
           {/* Description */}
@@ -85,7 +96,9 @@ export default function Hero() {
             transition={{ delay: 0.5 }}
             className="mx-auto mb-12 max-w-3xl text-base text-[#464E68] sm:text-lg lg:text-xl"
           >
-            SmartNotes AI instantly transforms patient visits into structured SOAP Notes, patient summaries, billing codes, and comprehensive documentation — all HIPAA-compliant and EMR-integrated.
+            SmartNotes AI instantly transforms patient visits into structured
+            SOAP Notes, patient summaries, billing codes, and comprehensive
+            documentation — all HIPAA-compliant and EMR-integrated.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -107,14 +120,14 @@ export default function Hero() {
 
           {/* Flipping arrows */}
           <motion.div
-            animate={{ rotateY: [0, 180, 360] }} 
+            animate={{ rotateY: [0, 180, 360] }}
             className="absolute z-10 left-10 top-[100%] hidden lg:block"
           >
             <img src="/images/left-arrow.png" alt="" className="w-[13vw]" />
           </motion.div>
 
           <motion.div
-            animate={{ rotateY: [0, 180, 360] }} 
+            animate={{ rotateY: [0, 180, 360] }}
             className="absolute z-10 right-10 top-[100%] hidden lg:block"
           >
             <img src="/images/right-arrow.png" alt="" className="w-[13vw]" />
@@ -125,7 +138,7 @@ export default function Hero() {
       {/* Scroll Scale Hero Image */}
       <motion.div
         style={{ scale }}
-        className="relative mx-auto p-4 md:-mt-32 -mt-0"
+        className="relative mx-auto p-2"
       >
         <img
           src="/images/hero-main.png"
@@ -146,4 +159,3 @@ export default function Hero() {
     </section>
   );
 }
-
