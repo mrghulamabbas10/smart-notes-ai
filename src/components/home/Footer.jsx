@@ -35,7 +35,7 @@ export function Footer() {
               />
               <button
                 type="submit"
-                className="px-6 lg:px-8 py-3 lg:py-4 rounded-full bg-gradient-to-tr from-[#BAD3FF] to-[#1457EA] text-white text-sm lg:text-base hover:shadow-lg transition-all duration-300 whitespace-nowrap"
+                className="px-6 md:ml-0 -ml-5 lg:px-8 py-3 lg:py-4 rounded-full bg-gradient-to-tr from-[#BAD3FF] to-[#1457EA] text-white text-sm lg:text-base hover:shadow-lg transition-all duration-300 whitespace-nowrap"
               >
                 Submit Now
               </button>
