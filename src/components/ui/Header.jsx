@@ -21,7 +21,7 @@ export default function Header() {
   ];
 
   const handleClickNewEncounter = () => {
-    router.push("/");
+    router.push("/dashbord");
   };
 
   return (

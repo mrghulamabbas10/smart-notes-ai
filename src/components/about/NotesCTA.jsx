@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Layars from "../assets/layars";
 
 export function NotesCTA() {
@@ -17,9 +18,12 @@ export function NotesCTA() {
           </p>
 
           <div className="flex items-center relative z-20">
-            <button className="md:px-8 px-5 md:text-base text-sm py-3 rounded-full border border-white bg-gradient-to-tr from-[#FFFFFF] to-[#1457EA] backdrop-blur-sm text-brand-blue-dark font-bold hover:shadow-lg transition-all duration-300">
+            <Link
+              href="/dashboard"
+              className="md:px-8 px-5 md:text-base text-sm py-3 rounded-full border border-white bg-gradient-to-tr from-[#FFFFFF] to-[#1457EA] backdrop-blur-sm text-brand-blue-dark font-bold hover:shadow-lg transition-all duration-300"
+            >
               Start Free Trial
-            </button>
+            </Link>
             <button className="md:px-8 px-5 md:text-base text-sm py-3 rounded-full text-white  font-bold hover:shadow-lg transition-all duration-300">
               Contact Us
             </button>

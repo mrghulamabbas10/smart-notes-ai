@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Brands from "./Brands";
 import Header from "./Header";
+import Link from "next/link";
 
 export default function Hero() {
   const ref = useRef(null);
@@ -109,10 +110,10 @@ export default function Hero() {
             transition={{ delay: 0.7 }}
             className="flex items-center gap-4"
           >
-            <button className="group relative overflow-hidden rounded-full bg-gradient-to-r from-[#BAD3FF] to-[#1457EA] px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:shadow-xl">
+            <Link href="/dashboard" className="group relative overflow-hidden rounded-full bg-gradient-to-r from-[#BAD3FF] to-[#1457EA] px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:shadow-xl">
               <div className="absolute inset-0 -z-10 rounded-full bg-[#4188FF] opacity-50 blur-xl"></div>
               Try it for Free
-            </button>
+            </Link>
             <button className="glassmorphic-light rounded-full border border-white px-8 py-4 text-base font-semibold text-[#1457EA] transition hover:bg-white/80">
               Login
             </button>

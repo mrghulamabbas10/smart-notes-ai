@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Header from "../home/Header";
 
-export default function AboutHero() {
+export default function FeatureHero() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -32,7 +32,7 @@ export default function AboutHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/fd72e36943bf40025f4529e03abb650aca4206ac?width=2884"
+          src="/images/bg-img.png?width=2884"
           alt=""
           className="h-full w-full object-cover opacity-50"
         />
@@ -51,7 +51,7 @@ export default function AboutHero() {
             animate="visible"
             className="text-center md:text-5xl text-[9vw] md:leading-tight leading-[11vw] font-bold text-[#00234B] sm:text-6xl lg:text-[92px]"
           >
-            Empowering Healthcare through Documentation
+            SmartNotes AI: Built to Unburden Your Day
           </motion.h1>
 
           <motion.h3
@@ -60,16 +60,8 @@ export default function AboutHero() {
             animate="visible"
             className="font-semibold text-[#00234B] md:text-2xl text-xl text-center"
           >
-            Built for clinical flow.
+            Clean, direct, and focused on benefits.
           </motion.h3>
-          <motion.h2
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            className=" text-[#464E68] md:text-2xl text-xl text-center"
-          >
-            Transforming Clinical Notes with AI
-          </motion.h2>
 
           {/* Description */}
           <motion.p
@@ -77,12 +69,22 @@ export default function AboutHero() {
             initial="hidden"
             animate="visible"
             transition={{ delay: 0.5 }}
-            className="mx-auto md:mb-12 mb-8 text-center max-w-3xl text-[#464E68] text-base  sm:text-lg lg:text-xl"
+            className="mx-auto md:mb-12 mb-8 text-center max-w-3xl text-[#464E68] text-base  sm:text-lg 2xl:text-xl"
           >
-            We're building intelligent solutions that simplify the way
-            healthcare professionals document care. From solo practices to
-            enterprise clinics, SmartNotes AI is on a mission to make clinical
-            note-taking faster, more accurate, and less of a daily burden.
+            In a world where physicians spend more time typing than treating,
+            SmartNotes AI transforms clinical documentation into something
+            effortless. It's a voice-enabled, AI-powered application that
+            listens to your patient encounters in real time, understands the
+            medical context, and automatically generates accurate SOAP notes,
+            billing data, and summaries—all while maintaining full HIPAA
+            compliance.
+            <br />
+            <br />
+            Built for doctors, not data entry, SmartNotes AI eliminates the
+            repetitive tasks that slow you down. From solo practitioners to
+            growing group practices, it helps healthcare providers reclaim their
+            time, reduce burnout, and get back to what really matters: patient
+            care.
           </motion.p>
         </div>
       </div>
@@ -90,7 +92,7 @@ export default function AboutHero() {
       {/* Scroll Scale Hero Image */}
       <motion.div style={{ scale }} className="relative mx-auto p-2">
         <img
-          src="/images/about-hero.png"
+          src="/images/feature-main.png"
           alt="SmartNotes AI Interface Preview"
           className="h-full w-full object-cover"
         />

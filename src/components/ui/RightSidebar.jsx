@@ -1,7 +1,4 @@
-import Link from "next/link";
 import FiltersIcon from "../assets/filters";
-
-import { BsStars } from "react-icons/bs";
 
 export default function RightSidebar() {
   return (
@@ -50,7 +47,7 @@ export default function RightSidebar() {
                 "#50D7B9",
                 "#40E599",
                 "#4DE3A3",
-                "#55DCA7", 
+                "#55DCA7",
               ];
               return (
                 <div

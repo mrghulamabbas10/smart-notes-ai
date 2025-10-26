@@ -33,7 +33,7 @@ export default function NewEncounterForm() {
 
     if (validateForm()) {
       // Redirect to /ask-ai page
-      router.push("/ai");
+      router.push("/dashboard/ai");
     }
   };
 

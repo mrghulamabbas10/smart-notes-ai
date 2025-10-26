@@ -135,7 +135,10 @@ export default function Sidebar({ isOpen, onClose }) {
                           </div>
                         )}
 
-                        <button onClick={() => setShowPopup(true)} className="w-[29px] h-[29px] rounded-full border border-black/10 flex items-center justify-center ml-2 opacity-100 transition-opacity">
+                        <button
+                          onClick={() => setShowPopup(true)}
+                          className="w-[29px] h-[29px] rounded-full border border-black/10 flex items-center justify-center ml-2 opacity-100 transition-opacity"
+                        >
                           <DeleteIcon />
                         </button>
                       </div>
@@ -157,7 +160,7 @@ export default function Sidebar({ isOpen, onClose }) {
                                 <CurveIcon />
                                 {/* actual nested reply box */}
                                 <div
-                                  onClick={() => router.push("/note")}
+                                  onClick={() => router.push("/dashboard/note")}
                                   className="w-full h-[53px] rounded-2xl bg-gray-100 flex items-center justify-between px-4 cursor-pointer hover:bg-gray-200 transition-colors relative"
                                 >
                                   <div>
