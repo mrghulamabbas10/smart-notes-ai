@@ -32,7 +32,7 @@ export default function AboutHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/fd72e36943bf40025f4529e03abb650aca4206ac?width=2884"
+          src="/images/bg-img.png?width=2884"
           alt=""
           className="h-full w-full object-cover opacity-50"
         />
