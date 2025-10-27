@@ -15,6 +15,7 @@ export default function Header() {
     { label: "About Us", href: "/about" },
     { label: "Contact Us", href: "/contact" },
     { label: "Specialities", href: "/specialities" },
+    { label: "Blogs", href: "/blogs" },
   ];
 
   return (
