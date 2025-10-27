@@ -14,7 +14,7 @@ export default function Header() {
     { label: "Pricing", href: "#pricing" },
     { label: "About Us", href: "/about" },
     { label: "Contact Us", href: "/contact" },
-    { label: "Resources", href: "#resources" },
+    { label: "Specialities", href: "/specialities" },
   ];
 
   return (
@@ -55,7 +55,7 @@ export default function Header() {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: "-100%", opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="fixed inset-0 z-30 flex flex-col items-center justify-center gap-6 bg-white/60 backdrop-blur-lg md:hidden rounded-b-[40px] shadow-lg"
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-white/60 backdrop-blur-lg md:hidden rounded-b-[40px] shadow-lg"
           >
             <div className="absolute top-5 right-5">
               <button
