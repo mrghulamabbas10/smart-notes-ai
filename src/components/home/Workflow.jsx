@@ -38,9 +38,6 @@ export default function Workflow() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-16 text-center">
-          <div className="inline-block -rotate-12 rounded-2xl bg-[#2166FF] px-6 py-1 text-sm font-medium text-white">
-            Why choose us
-          </div>
           <h2 className="mb-6 font-urbanist text-4xl font-bold leading-tight text-[#120A0B] sm:text-5xl lg:text-[56px]">
             SmartNotes AI Workflow
           </h2>
@@ -53,7 +50,10 @@ export default function Workflow() {
         {/* Workflow Steps */}
         <div className="grid gap-8 lg:grid-cols-3">
           {steps.map((step, index) => (
-            <div key={index} className="rounded-3xl bg-[#F1F5F8] p-8 !sticky top-20">
+            <div
+              key={index}
+              className="rounded-3xl bg-[#F1F5F8] p-8 !sticky top-20"
+            >
               {/* Icon */}
               <div className="relative mb-6">
                 <div className="absolute h-14 w-10 bg-[#009DFF] opacity-50 blur-xl"></div>

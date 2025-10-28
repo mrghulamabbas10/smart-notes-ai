@@ -19,7 +19,7 @@ export default function Header() {
   ];
 
   return (
-    <nav className="relative z-20 mx-auto flex max-w-7xl items-center justify-between px-4 md:pt-8 pt-3 sm:px-6 lg:px-8">
+    <nav className="fixed w-full z-20 mx-auto flex max-w-7xl items-center justify-between px-4 md:pt-8 pt-3 sm:px-6 lg:px-8">
       {/* Center Menu - Desktop */}
       <div className="hidden w-full items-center justify-center md:flex">
         <div className="glassmorphic flex items-center gap-4 rounded-full border border-white px-8 py-3 opacity-90 backdrop-blur-sm sm:gap-6 lg:gap-8">

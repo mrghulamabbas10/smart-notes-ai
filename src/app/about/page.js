@@ -5,18 +5,22 @@ import OurApproachSection from "@/components/about/OurApproachSection";
 import OurValuesSection from "@/components/about/OurValuesSection";
 import WhatWeBelieveSection from "@/components/about/WhatWeBelieveSection";
 import { Footer } from "@/components/home/Footer";
+import Header from "@/components/home/Header";
 import React from "react";
 
 export default function Page() {
   return (
-    <main>
-      <AboutHero />
-      <OurValuesSection />
-      <MissionVisionSection />
-      <WhatWeBelieveSection />
-      <OurApproachSection />
-      <NotesCTA />
+    <>
+      <Header />
+      <main>
+        <AboutHero />
+        <OurValuesSection />
+        <MissionVisionSection />
+        <WhatWeBelieveSection />
+        <OurApproachSection />
+        <NotesCTA />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

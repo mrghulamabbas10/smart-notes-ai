@@ -8,20 +8,24 @@ import Hero from "@/components/home/Hero";
 import KeyCapabilities from "@/components/home/KeyCapabilities";
 import Stats from "@/components/home/Stats";
 import Workflow from "@/components/home/Workflow";
+import Header from "@/components/home/Header";
 
 export default function Page() {
   return (
-    <main>
-      <Hero />
-      <Workflow />
-      <KeyCapabilities />
-      <Stats />
-      <BannerSection />
-      <Testimonials />
-      <Pricing />
-      <CTA />
-      <FAQ />
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <Workflow />
+        <KeyCapabilities />
+        <Stats />
+        <BannerSection />
+        <Testimonials />
+        <Pricing />
+        <CTA />
+        <FAQ />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

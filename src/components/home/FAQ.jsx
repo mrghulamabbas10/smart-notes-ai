@@ -44,14 +44,9 @@ export function FAQ() {
   return (
     <section className="w-full py-16 lg:py-[80px] px-6 lg:px-[348px]">
       <div className="max-w-[750px] mx-auto space-y-12">
-        <div className="flex flex-col justify-center">
-          <div className="inline-block mx-auto w-fit rotate-12 rounded-2xl bg-[#2166FF] px-6 py-1 text-sm font-medium text-white">
-            FAQ
-          </div>
-          <h2 className="text-3xl text-center lg:text-[48px] font-bold text-[#00234B] leading-tight">
+         <h2 className="text-3xl text-center lg:text-[48px] font-bold text-[#00234B] leading-tight">
             Still Unsure? Here's What You Need to Know
           </h2>
-        </div>
 
         <div className="space-y-4">
           {faqs.map((faq) => (

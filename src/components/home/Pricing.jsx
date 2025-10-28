@@ -60,13 +60,12 @@ const pricingPlans = [
 
 export function Pricing() {
   return (
-    <section className="w-full bg-[#EAF7FF] py-16 lg:py-[133px] px-6" id="pricing">
+    <section
+      className="w-full bg-[#EAF7FF] py-16 lg:py-[133px] px-6"
+      id="pricing"
+    >
       <div className="container mx-auto max-w-[1440px]">
         <div className="text-center mb-12 lg:mb-16">
-          <div className="inline-block rotate-12 rounded-2xl bg-[#2166FF] px-6 py-1 text-sm font-medium text-white">
-            Pricing
-          </div>
-
           <h2 className="text-3xl lg:text-[48px] font-bold text-[#1A1A1A] leading-tight">
             Choose the <span className="text-primary italic">right plan</span>{" "}
             for you and your business

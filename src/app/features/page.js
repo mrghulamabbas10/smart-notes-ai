@@ -6,17 +6,21 @@ import FeaturesMatter from "@/components/features/FeaturesMatter";
 import BlueGradientBanner from "@/components/features/BlueGradientBanner";
 import CTASection from "@/components/features/CTASection";
 import { Footer } from "@/components/home/Footer";
+import Header from "@/components/home/Header";
 
 export default function Page() {
   return (
-    <main>
-      <FeatureHero />
-      <CoreFeatures />
-      <UsefulFeature />
-      <FeaturesMatter />
-      <BlueGradientBanner />
-      <CTASection />
+    <>
+      <Header />
+      <main>
+        <FeatureHero />
+        <CoreFeatures />
+        <UsefulFeature />
+        <FeaturesMatter />
+        <BlueGradientBanner />
+        <CTASection />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

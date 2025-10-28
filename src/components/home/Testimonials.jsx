@@ -37,10 +37,6 @@ export function Testimonials() {
     <section className="w-full bg-white py-16 lg:py-[130px] px-6 lg:px-[120px]">
       <div className="container mx-auto max-w-[1200px]">
         <div className="text-center mb-12 lg:mb-[60px]">
-          <div className="inline-block -rotate-12 rounded-2xl bg-[#2166FF] px-6 py-1 text-sm font-medium text-white">
-            Testimonials
-          </div>
-
           <h2 className="text-4xl lg:text-[56px] font-bold leading-tight">
             What our users are saying
           </h2>

@@ -26,16 +26,13 @@ export default function ContactUs() {
             alt=""
             className="h-full w-full object-cover opacity-50"
           />
-        </div>
-
-        {/* Navigation */}
-        <Header />
+        </div> 
 
         {/* Gradient Overlay */}
         <div className="absolute bottom-0 left-0 right-0 h-64 md:h-96 bg-gradient-to-t from-[#EFF9FF] via-[#EFF9FF]/60 to-transparent"></div>
 
         {/* Hero Content */}
-        <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-16 md:mt-20 mt-10">
+        <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-16 md:mt-32 mt-24">
           <motion.h1
             variants={fadeUp}
             initial="hidden"
