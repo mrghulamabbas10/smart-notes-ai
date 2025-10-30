@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <div>
       <nav className="fixed w-full left-1/2 -translate-x-1/2 z-20 flex items-center justify-between px-4 sm:px-6 lg:px-20 md:pt-4 pt-3">
-        <div className="md:-ml-5 -ml-3">
+        <Link href="/" className="md:-ml-5 -ml-3 block">
           <Image
             src="/images/nav-logo.png"
             alt="nav-logo"
@@ -30,7 +30,7 @@ export default function Header() {
             height={74}
             className="md:w-[133px] md:h-[74px] w-[100px] h-[80px] object-contain"
           />
-        </div>
+        </Link>
         {/* Center Menu - Desktop */}
         <div className="glassmorphic lg:flex hidden items-center gap-4 rounded-full border border-white px-8 py-3 opacity-90 backdrop-blur-sm sm:gap-6 lg:gap-8">
           {navLinks.map((link) => (

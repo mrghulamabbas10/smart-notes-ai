@@ -9,6 +9,7 @@ import KeyCapabilities from "@/components/home/KeyCapabilities";
 import Stats from "@/components/home/Stats";
 import Workflow from "@/components/home/Workflow";
 import Header from "@/components/home/Header";
+import UsefulFeature from "@/components/features/UsefulFeature";
 
 export default function Page() {
   return (
@@ -18,6 +19,7 @@ export default function Page() {
         <Hero />
         <Workflow />
         <KeyCapabilities />
+        <UsefulFeature />
         <Stats />
         <BannerSection />
         <Testimonials />

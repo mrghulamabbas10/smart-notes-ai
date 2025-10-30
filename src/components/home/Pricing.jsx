@@ -9,12 +9,10 @@ const pricingPlans = [
     price: "$89",
     period: "/month",
     features: [
-      "Unlimited Sessions",
+      "Unlimited sessions in a month",
       "SOAP + Consult Notes",
-      "Automated CPT & ICD Billing",
-      "EHR/EMR Integration",
-      "Multiple Templates",
-      "30-Day Free Trial",
+      "CPT/ICD Diagnosis Codes with Reimbursement rates",
+      "Multiple specialties Templates",
     ],
     ctaText: "Start Premium Plan",
     featured: false,
@@ -28,11 +26,12 @@ const pricingPlans = [
     price: "Custom",
     period: "/pricing",
     features: [
-      "All Premium Features",
-      "Multi-User Access",
-      "Centralized Admin Controls",
-      "Dedicated Support",
-      "Discounted Price for Each User",
+      "Unlimited Sessions",
+      "SOAP + Consult Notes",
+      "Automated CPT & ICD Billing",
+      "EHR/EMR Integration",
+      "Multiple Templates",
+      "30-Day Free Trial",
     ],
     ctaText: "Start Group Practice Plan",
     featured: true,
@@ -128,9 +127,9 @@ export function Pricing() {
                 <div className="text-base text-[#1A1A1A] mb-4">
                   {plan.id === "premium"
                     ? "Features:"
-                    : `All features in ${
-                        plan.id === "group" ? "Free" : "Pro"
-                      }, plus :`}
+                    : `${
+                        plan.id === "group" ? "Features:" : "All features in Free plus"
+                      }`}
                 </div>
                 <ul className="space-y-3">
                   {plan.features.map((feature, i) => (

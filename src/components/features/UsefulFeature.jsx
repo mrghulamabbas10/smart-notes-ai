@@ -8,7 +8,7 @@ import { UsefulFeatureData } from "./data";
 
 export default function UsefulFeature() {
   return (
-    <section className="py-10 md:py-16 px-4 md:px-16 max-w-[1440px] mx-auto">
+    <section className="py-10 md:py-16 px-4 md:px-20 max-w-[1440px] mx-auto">
       <div className="max-w-4xl text-center mb-16 mx-auto">
         <h2 className="text-[#012025] text-center text-4xl md:text-[56px] font-bold leading-[1.12] tracking-[-1px] px-4">
           More Useful Features
@@ -47,7 +47,7 @@ export default function UsefulFeature() {
         >
           {UsefulFeatureData.map((value, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-[#F1F5F8] rounded-2xl p-8 h-[450px] flex flex-col">
+              <div className="bg-[#F1F5F8] rounded-2xl p-8 h-[490px] flex flex-col">
                 <div className="relative w-[60px] h-[68px] mb-10">
                   <div className="relative">{value.icon}</div>
                 </div>
@@ -57,7 +57,7 @@ export default function UsefulFeature() {
                 <p className="font-satoshi text-[16px] font-normal leading-[21.2px] text-[#454140]">
                   {value.description}
                 </p>
-                <ul className="space-y-3 list-disc ml-5 text-[#454140] text-[16px] font-normal leading-[21.2px] mt-4">
+                <ul className="space-y-2 list-disc ml-5 text-[#454140] text-[16px] font-normal leading-[21.2px] mt-4">
                   {value.list.map((item, idx) => (
                     <li key={idx}>{item}</li>
                   ))}
