@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,10 +20,19 @@ export default function Header() {
   ];
 
   return (
-    <nav className="fixed w-full z-20 mx-auto flex max-w-7xl items-center justify-between px-4 md:pt-8 pt-3 sm:px-6 lg:px-8">
-      {/* Center Menu - Desktop */}
-      <div className="hidden w-full items-center justify-center md:flex">
-        <div className="glassmorphic flex items-center gap-4 rounded-full border border-white px-8 py-3 opacity-90 backdrop-blur-sm sm:gap-6 lg:gap-8">
+    <div>
+      <nav className="fixed w-full left-1/2 -translate-x-1/2 z-20 flex items-center justify-between px-4 sm:px-6 lg:px-20 md:pt-4 pt-3">
+        <div className="md:-ml-5 -ml-3">
+          <Image
+            src="/images/nav-logo.png"
+            alt="nav-logo"
+            width={133}
+            height={74}
+            className="md:w-[133px] md:h-[74px] w-[100px] h-[80px] object-contain"
+          />
+        </div>
+        {/* Center Menu - Desktop */}
+        <div className="glassmorphic lg:flex hidden items-center gap-4 rounded-full border border-white px-8 py-3 opacity-90 backdrop-blur-sm sm:gap-6 lg:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -33,21 +43,21 @@ export default function Header() {
             </Link>
           ))}
         </div>
-      </div>
 
-      {/* Login Button */}
-      <button className="glassmorphic-light hidden md:block absolute right-4 top-8 rounded-full border border-white px-8 py-3 font-fustat text-sm font-semibold text-[#00234B] transition hover:bg-white/80 sm:right-6 lg:right-8">
-        Login
-      </button>
-
-      {/* Mobile Menu Button */}
-      <button
-        onClick={() => setMenuOpen(!menuOpen)}
-        className="block md:hidden text-[#00234B] border-white border p-3 rounded"
-      >
-        <Menu size={28} />
-      </button>
-
+        {/* Login Button */}
+        <div>
+          <button className="glassmorphic-light hidden md:block rounded-full border border-white px-8 py-3 font-fustat text-sm font-semibold text-[#00234B] transition hover:bg-white/80 sm:right-6 lg:right-8">
+            Login
+          </button>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="block lg:hidden text-[#00234B] border-white border p-2 rounded"
+          >
+            <Menu size={24} />
+          </button>
+        </div>
+      </nav>
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {menuOpen && (
@@ -85,6 +95,6 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </div>
   );
 }

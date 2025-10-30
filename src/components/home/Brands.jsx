@@ -9,7 +9,7 @@ export default function Brands() {
         <img
           src="/images/brand1.png?width=287"
           alt="NextGen"
-          className="h-6 transition hover:opacity-100"
+          className="h-10 transition hover:opacity-100"
         />
         <img
           src="/images/brand2.png?width=293"
@@ -24,7 +24,7 @@ export default function Brands() {
         <img
           src="/images/brand4.png?width=164"
           alt="eClinicalWorks"
-          className="h-5 transition hover:opacity-100"
+          className="h-10 transition hover:opacity-100"
         />
         <img
           src="/images/brand5.png?width=154"
@@ -39,7 +39,7 @@ export default function Brands() {
         <img
           src="/images/brand4.png?width=164"
           alt="eClinicalWorks"
-          className="h-5 transition hover:opacity-100"
+          className="h-10 transition hover:opacity-100"
         />
       </div>
     </Marquee>

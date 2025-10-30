@@ -70,7 +70,7 @@ export default function HomeSlider() {
   };
 
   return (
-    <div className="relative z-10 mx-auto max-w-7xl px-4 lg:pt-32 md:pt-20 pt-10 sm:px-6 lg:px-8 grid grid-cols-12 gap-8 mb-20">
+    <div className="relative z-10  lg:pt-32  pt-28 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-12 gap-8 mb-20">
       {/* LEFT CONTENT */}
       <div className="flex flex-col justify-center lg:col-span-5 col-span-full overflow-hidden">
         <AnimatePresence mode="wait">
