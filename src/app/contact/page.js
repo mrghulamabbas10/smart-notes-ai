@@ -4,6 +4,7 @@ import PartnerSection from "@/components/contact/PartnerSection";
 import SupportQuestions from "@/components/contact/SupportQuestions";
 import { Footer } from "@/components/home/Footer";
 import Header from "@/components/home/Header";
+import { FAQ } from "@/components/home/FAQ";
 
 export default function Page() {
   return (
@@ -13,6 +14,7 @@ export default function Page() {
         <ContactUs />
         <SupportQuestions />
         <PartnerSection />
+        <FAQ />
       </main>
       <Footer />
     </>
