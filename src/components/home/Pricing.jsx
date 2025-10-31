@@ -3,10 +3,10 @@ import { Check, ArrowRight } from "lucide-react";
 const pricingPlans = [
   {
     id: "premium",
-    name: "Premium",
+    name: "Freemium",
     description:
       "Perfect for solo physicians and healthcare professionals. Get the most out of SmartNotes AI. Unlimited sessions mean more value, more freedom, and no restrictions on how often you streamline your clinical documentation.",
-    price: "$89",
+    price: "$0",
     period: "/month",
     features: [
       "Unlimited sessions in a month",
@@ -14,16 +14,17 @@ const pricingPlans = [
       "CPT/ICD Diagnosis Codes with Reimbursement rates",
       "Multiple specialties Templates",
     ],
-    ctaText: "Start Premium Plan",
+    ctaText: "Start Freemium Plan",
     featured: false,
     badge: null,
   },
+
   {
-    id: "group",
-    name: "Group Practice",
+    id: "hospital",
+    name: "Premium",
     description:
-      "For Clinics and healthcare organizations. Manage multiple users effortlessly with admin controls and enjoy unified billing that keeps your organization running smoothly.",
-    price: "Custom",
+      "Perfect for solo physicians and healthcare professionals. Get the most out of SmartNotes AI. Unlimited sessions mean more value, more freedom, and no restrictions on how often you streamline your clinical documentation.",
+    price: "$89",
     period: "/pricing",
     features: [
       "Unlimited Sessions",
@@ -33,15 +34,15 @@ const pricingPlans = [
       "Multiple Templates",
       "30-Day Free Trial",
     ],
-    ctaText: "Start Group Practice Plan",
-    featured: true,
-    badge: "Upto 20% Off",
+    ctaText: "Start Premium Plan",
+    featured: false,
+    badge: null,
   },
   {
-    id: "hospital",
-    name: "Hospital Practice",
+    id: "group",
+    name: "Group & Hospital Practice",
     description:
-      "For Hospitals and healthcare organizations. Manage multiple users effortlessly with admin controls and enjoy unified billing that keeps your organization running smoothly.",
+      "For Clinics, Hospitals, and healthcare organizations — manage multiple users effortlessly with admin controls & enjoy unified billing that keeps your organization running smoothly.",
     price: "Custom",
     period: "/pricing",
     features: [
@@ -51,9 +52,9 @@ const pricingPlans = [
       "Dedicated Support",
       "Discounted Price for Each User",
     ],
-    ctaText: "Start Hospital Practice Plan",
-    featured: false,
-    badge: null,
+    ctaText: "Start your Practice Plan",
+    featured: true,
+    badge: "Upto 20% Off",
   },
 ];
 
@@ -64,7 +65,7 @@ export function Pricing() {
       id="pricing"
     >
       <div className="container mx-auto max-w-[1440px]">
-        <div className="text-center mb-12 lg:mb-16">
+        <div className="text-center mb-5 lg:mb-2">
           <h2 className="text-3xl lg:text-[48px] font-bold text-[#1A1A1A] leading-tight">
             Choose the <span className="text-primary italic">right plan</span>{" "}
             for you and your business
@@ -77,7 +78,7 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 max-w-[1320px] mx-auto relative mt-20">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 max-w-[1320px] mx-auto relative">
           {pricingPlans.map((plan, index) => (
             <div
               key={plan.id}
@@ -87,7 +88,7 @@ export function Pricing() {
                   : "bg-white border border-[#DEDEDE]"
               }`}
             >
-              {plan.featured && index === 1 && (
+              {plan.featured && index === 2 && (
                 <div className="absolute -top-16 md:right-0 right-5 flex items-center gap-2">
                   <img
                     src="/images/onlyarrow.png?width=160"
@@ -101,12 +102,12 @@ export function Pricing() {
                 </div>
               )}
 
-              <div className="flex items-start justify-between mb-6 lg:mb-8">
+              <div className="flex items-start justify-between mb-3 lg:mb-3">
                 <h3 className="text-2xl lg:text-[32px] font-bold text-[#1A1A1A]">
                   {plan.name}
                 </h3>
                 {plan.badge && (
-                  <span className="bg-[#1A1A1A] text-white px-3 py-1.5 rounded-full text-sm">
+                  <span className="bg-[#1A1A1A] text-nowrap text-white px-3 py-1.5 rounded-full text-sm">
                     {plan.badge}
                   </span>
                 )}
@@ -128,7 +129,9 @@ export function Pricing() {
                   {plan.id === "premium"
                     ? "Features:"
                     : `${
-                        plan.id === "group" ? "Features:" : "All features in Free plus"
+                        plan.id === "group"
+                          ? " All features in Free plus"
+                          : "Features:"
                       }`}
                 </div>
                 <ul className="space-y-3">
