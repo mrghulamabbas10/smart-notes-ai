@@ -1,6 +1,5 @@
 import { BannerSection } from "@/components/home/BannerSection";
-import { CTA } from "@/components/home/CTA";
-import { FAQ } from "@/components/home/FAQ";
+import { CTA } from "@/components/home/CTA"; 
 import { Footer } from "@/components/home/Footer";
 import { Pricing } from "@/components/home/Pricing";
 import { Testimonials } from "@/components/home/Testimonials";
@@ -25,7 +24,6 @@ export default function Page() {
         <Testimonials />
         <Pricing />
         <CTA />
-        <FAQ />
       </main>
       <Footer />
     </>

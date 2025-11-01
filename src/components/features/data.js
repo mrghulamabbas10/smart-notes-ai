@@ -302,3 +302,60 @@ export const UsefulFeatureData = [
     ],
   },
 ];
+
+
+
+export const features = [
+  {
+    tag: "Notes",
+    title: (
+      <>
+        SOAP and Followup Note
+      </>
+    ),
+    description:
+      "Our AI based solution generate note including Chief Complaint, HPI and Review of system from the encounter.",
+    points: [
+      "Captures nuance from conversations",
+      "Recognizes medical acronyms and conditions",
+      "Aligns with SOAP and narrative flows",
+      "Tailored Note for different specialities",
+    ],
+    image: "/images/core-feature1.png",
+  },
+  {
+    tag: "Medical Billing",
+    title: (
+      <>
+        Automated Medical <br /> Billing Information
+      </>
+    ),
+    description:
+      "Automatically generates Billing codes (CPT, ICD-10, HCPC) from the patient encounter, helps with Medical coding precision and boost revenue.",
+    points: [
+      "Built-in code identification",
+      "Aligns with U.S. and Canada billing standards",
+      "Reduces coding errors and rework",
+      "Provide Reimbursement rates for Public & Private payers.",
+      "CMS and AMA standards guidelines Integrations.",
+    ],
+    image: "/images/core-feature2.png",
+  },
+  {
+    tag: "Visit Summary",
+    title: (
+      <>
+        Clean Patient Summaries
+      </>
+    ),
+    description:
+      "Create shareable Patient encounter summaries which include Key Findings, Recommendations, Follow-up instruction and Patient guidance etc.",
+    points: [
+      "Customizable formatting",
+      "Includes treatment plans and follow-ups",
+      "Easily downloadable or sharable",
+      "Share the Encounter summary with the patient instantly through emails",
+    ],
+    image: "/images/core-feature3.png",
+  },
+];

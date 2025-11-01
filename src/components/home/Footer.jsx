@@ -2,12 +2,10 @@ import Facebook from "../assets/facebook";
 import Instagram from "../assets/Instagram";
 import Linkedin from "../assets/Linkedin";
 
- 
-
 export function Footer() {
   return (
-    <footer className="relative w-full bg-[#00234B] text-white overflow-hidden">
-      <div
+    <footer className="relative w-full bg-[#00234B] text-white overflow-hidden pt-8">
+      {/* <div
         className=" inset-0 opacity-30 text-[120px] md:leading-tight leading-[120px] lg:text-[229px] font-bold text-center flex items-center justify-center md:mt-0 mt-8"
         style={{
           background:
@@ -18,15 +16,15 @@ export function Footer() {
         }}
       >
         Smart Notes
-      </div>
+      </div> */}
 
-      <div className="relative container mx-auto px-6 lg:px-10 py-10">
+      <img src="/images/footer-heading.png" alt="" className="w-full" />
+
+      <div className="relative container mx-auto px-6 lg:px-10 py-5 ">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
           <div className="lg:col-span-2">
             <img src="/images/logo.png" alt="" className="w-3/4" />
-            <p>
-              Simplify Your Notes, Amplify Your Productivity.
-            </p>
+            <p>Simplify Your Notes, Amplify Your Productivity.</p>
           </div>
 
           <div className="space-y-4">
@@ -53,20 +51,22 @@ export function Footer() {
           </div>
 
           <div className="space-y-4">
-            <h4 className="text-lg lg:text-xl font-medium mb-4">Social Media</h4>
+            <h4 className="text-lg lg:text-xl font-medium mb-4">
+              Social Media
+            </h4>
             <div className="space-y-3">
               <a
                 href="#"
                 className="flex items-center gap-3 text-sm lg:text-base text-[#DCE2E3] hover:text-white transition-colors"
               >
-              <Facebook/>
+                <Facebook />
                 <span>Facebook</span>
               </a>
               <a
                 href="#"
                 className="flex items-center gap-3 text-sm lg:text-base text-[#DCE2E3] hover:text-white transition-colors"
               >
-                <Instagram/>
+                <Instagram />
                 <span>Instagram</span>
               </a>
               <a

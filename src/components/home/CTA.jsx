@@ -27,7 +27,7 @@ export function CTA() {
 
         <div className="block md:absolute bottom-0 right-0">
           <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/65f3a0289a4c7bbdaa4d64d0025f17c8fb49b027?width=854"
+            src="/images/StartYourSmartNote.png?width=854"
             alt="Hand holding smartphone"
             className="w-full md:h-[450px] h-auto"
           />

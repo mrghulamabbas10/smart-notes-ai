@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
@@ -8,6 +8,20 @@ import Image from "next/image";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { label: "Features", href: "/features" },
@@ -21,7 +35,13 @@ export default function Header() {
 
   return (
     <div>
-      <nav className="fixed w-full left-1/2 -translate-x-1/2 z-20 flex items-center justify-between px-4 sm:px-6 lg:px-20 md:pt-4 pt-3">
+      <nav
+        className={`fixed w-full left-1/2 -translate-x-1/2 z-50 flex items-center justify-between px-4 sm:px-6 lg:px-20 md:pt-4 pt-3 transition-all duration-300 ${
+          scrolled
+            ? "bg-white shadow-md md:py-3 py-2"
+            : "bg-transparent md:py-4 py-3"
+        }`}
+      >
         <Link href="/" className="md:-ml-5 -ml-3 block">
           <Image
             src="/images/nav-logo.png"
@@ -31,6 +51,7 @@ export default function Header() {
             className="md:w-[133px] md:h-[74px] w-[100px] h-[80px] object-contain"
           />
         </Link>
+
         {/* Center Menu - Desktop */}
         <div className="glassmorphic lg:flex hidden items-center gap-4 rounded-full border border-white px-8 py-3 opacity-90 backdrop-blur-sm sm:gap-6 lg:gap-8">
           {navLinks.map((link) => (
@@ -44,20 +65,24 @@ export default function Header() {
           ))}
         </div>
 
-        {/* Login Button */}
+        {/* Login + Mobile Menu */}
         <div>
-          <button className="glassmorphic-light hidden md:block rounded-full border border-white px-8 py-3 font-fustat text-sm font-semibold text-[#00234B] transition hover:bg-white/80 sm:right-6 lg:right-8">
+          <button
+            className={`glassmorphic-light hidden md:block rounded-full border px-8 py-3 font-fustat text-sm font-semibold text-[#00234B] transition hover:bg-white/80 sm:right-6 lg:right-8  ${
+              scrolled ? "border-[#00234B]" : "border-white"
+            }`}
+          >
             Login
           </button>
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="block lg:hidden text-[#00234B] border-white border p-2 rounded"
+            className={`block lg:hidden text-[#00234B] border-white border p-2 rounded  `}
           >
             <Menu size={24} />
           </button>
         </div>
       </nav>
+
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {menuOpen && (

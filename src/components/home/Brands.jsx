@@ -36,10 +36,16 @@ export default function Brands() {
           alt="CareCloud"
           className="h-8 transition hover:opacity-100"
         />
+
         <img
-          src="/images/brand4.png?width=164"
+          src="/images/brand7.png?width=164"
           alt="eClinicalWorks"
-          className="h-10 transition hover:opacity-100"
+          className="h-6 transition hover:opacity-100"
+        />
+        <img
+          src="/images/brand8.png?width=164"
+          alt="eClinicalWorks"
+          className="h-8 mr-8 transition hover:opacity-100"
         />
       </div>
     </Marquee>

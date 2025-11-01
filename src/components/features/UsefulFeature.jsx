@@ -47,7 +47,7 @@ export default function UsefulFeature() {
         >
           {UsefulFeatureData.map((value, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-[#F1F5F8] rounded-2xl p-8 h-[490px] flex flex-col">
+              <div className="bg-[#F1F5F8] rounded-2xl p-8 h-[520px] md:h-[490px] flex flex-col">
                 <div className="relative w-[60px] h-[68px] mb-10">
                   <div className="relative">{value.icon}</div>
                 </div>

@@ -43,12 +43,15 @@ export default function Hero() {
       {/* Hero Content */}
       <HomeSlider />
       {/* Scroll Scale Hero Image */}
+      <div className="px-4 sm:px-6 lg:px-8 relative z-20 mx-auto max-w-7xl -mt-10 mb-5">
+        <img src="/images/header-logo.png" alt="" className="w-[7rem]" />
+      </div>
 
       {/* Partner Logos Section */}
       <div className="relative z-10 bg-gradient-to-t from-[#EFF9FF] to-transparent md:pb-16 pb-8 pt-0">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
           <h3 className="mb-12 text-center font-satoshi text-lg text-[#120A0B] sm:text-xl md:block hidden">
-            Integrated by the world's most innovative teams
+           Integrated with number of EMR’s, Medical Coding and Reimbursement standards
           </h3>
           <Brands />
         </div>

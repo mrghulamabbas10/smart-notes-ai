@@ -82,7 +82,7 @@ export function Pricing() {
           {pricingPlans.map((plan, index) => (
             <div
               key={plan.id}
-              className={`md:relative rounded-2xl p-8 lg:p-[33px] flex flex-col sticky top-24 ${
+              className={`md:relative rounded-2xl p-8 xl:p-5 lg:p-[33px] flex flex-col sticky top-24 ${
                 plan.featured
                   ? "bg-[#CBEBFF] border-2 border-primary shadow-xl"
                   : "bg-white border border-[#DEDEDE]"
@@ -113,19 +113,19 @@ export function Pricing() {
                 )}
               </div>
 
-              <p className="text-base text-[#1A1A1A] mb-8 min-h-[72px]">
+              <p className="xl:text-sm 2xl:text-lg text-base text-[#1A1A1A] mb-5 min-h-[72px]">
                 {plan.description}
               </p>
 
-              <div className="flex items-baseline gap-2 mb-8">
+              <div className="flex items-baseline gap-2 mb-5">
                 <span className="text-4xl lg:text-[48px] font-bold text-[#1A1A1A]">
                   {plan.price}
                 </span>
                 <span className="text-lg text-[#1A1A1A]/60">{plan.period}</span>
               </div>
 
-              <div className="mb-8">
-                <div className="text-base text-[#1A1A1A] mb-4">
+              <div className="mb-5">
+                <div className="text-base text-[#1A1A1A] mb-2">
                   {plan.id === "premium"
                     ? "Features:"
                     : `${
@@ -134,7 +134,7 @@ export function Pricing() {
                           : "Features:"
                       }`}
                 </div>
-                <ul className="space-y-3">
+                <ul className="space-y-2">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <div className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-primary flex items-center justify-center">
@@ -148,7 +148,7 @@ export function Pricing() {
                 </ul>
               </div>
 
-              <button className="mt-auto w-full py-4 px-6 rounded-full bg-gradient-to-tr from-[#BAD3FF] to-[#1457EA] text-white font-medium md:text-lg flex items-center justify-center gap-3 hover:shadow-lg transition-all duration-300 border border-[#3D5977]">
+              <button className="mt-auto w-full py-3 px-6 rounded-full bg-gradient-to-tr from-[#BAD3FF] to-[#1457EA] text-white font-medium md:text-lg flex items-center justify-center gap-3 hover:shadow-lg transition-all duration-300 border border-[#3D5977]">
                 {plan.ctaText}
                 <ArrowRight className="w-4 h-4" />
               </button>

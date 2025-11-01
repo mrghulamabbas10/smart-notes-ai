@@ -4,13 +4,6 @@ export default function SupportQuestions() {
   return (
     <section className="container mx-auto px-4 md:px-8 lg:px-16 py-10">
       <div className="bg-primary/20 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
-        <div className="flex-shrink-0">
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/6cbadc64992c7f5dc93ba356c785c27ed9ef4ed5?width=164"
-            alt="Support"
-            className="w-20 h-20"
-          />
-        </div>
         <div className="flex-1 text-center md:text-left">
           <h3 className="font-fustat font-bold text-[#00234B] text-xl mb-2">
             Support Questions

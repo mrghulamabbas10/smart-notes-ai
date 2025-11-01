@@ -44,9 +44,9 @@ export function FAQ() {
   return (
     <section className="w-full py-16 lg:py-[80px] px-6 lg:px-[348px]">
       <div className="max-w-[750px] mx-auto space-y-12">
-         <h2 className="text-3xl text-center lg:text-[48px] font-bold text-[#00234B] leading-tight">
-            Still Unsure? Here's What You Need to Know
-          </h2>
+        <h2 className="text-3xl text-center lg:text-[48px] font-bold text-[#00234B] leading-tight">
+          Still Unsure? Here's What You Need to Know
+        </h2>
 
         <div className="space-y-4">
           {faqs.map((faq) => (
@@ -80,12 +80,6 @@ export function FAQ() {
         </div>
 
         <div className="bg-[#DDEBF9] rounded-2xl p-6 lg:p-8 flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
-          <img
-            src="/images/question_mark.png?width=164"
-            alt="Question mark"
-            className="w-16 h-16 lg:w-[76px] lg:h-[76px]"
-          />
-
           <div className="flex-1 text-center lg:text-left">
             <h3 className="text-lg lg:text-xl font-bold text-[#00234B] mb-2">
               Still have questions?
