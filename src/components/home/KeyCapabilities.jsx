@@ -3,7 +3,7 @@ import { features } from "../features/data";
 
 export default function KeyCapabilities() {
   return (
-    <section id="features" className="md:px-8 px-2">
+    <section id="features" className="md:px-8 px-2 md:mt-0 mt-[5rem]">
       <div className="max-w-4xl text-center mb-16 mx-auto">
         <h2 className="text-[#012025] text-center text-4xl md:text-[56px] font-bold leading-[1.12] tracking-[-1px] px-4">
           Key Capabilities – Designed for Better Care
@@ -17,7 +17,7 @@ export default function KeyCapabilities() {
           {features.map((feature, index) => (
             <div key={index} className="contents ">
               {/* Text Block */}
-              <div className="flex flex-col justify-center gap-4 p-4 sm:p-6 lg:p-8">
+              <div className="flex flex-col justify-center gap-4 p-4 sm:p-6 lg:p-8 !sticky top-10 bg-[#EAF7FF] ">
                 <div className="px-5 rounded-full py-2 bg-white w-fit">
                   {feature.tag}
                 </div>
@@ -43,7 +43,7 @@ export default function KeyCapabilities() {
               </div>
 
               {/* Image */}
-              <img src={feature.image} alt={feature.tag} className="w-full" />
+              <img src={feature.image} alt={feature.tag} className="w-full relative z-30 bg-[#EAF7FF]" />
             </div>
           ))}
         </div>

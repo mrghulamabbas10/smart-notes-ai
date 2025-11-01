@@ -1,9 +1,22 @@
+"use client";
+import { motion, useScroll, useTransform } from "framer-motion";
+
 import { steps } from "./data";
+import { useRef } from "react";
 
 export default function Workflow() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  // Scroll-based scaling for hero image
+  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   return (
     <section
       id="workflow"
+      ref={ref}
       className="w-full bg-white py-10 md:py-16 md:mb-[20vw] mb-0"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -19,11 +32,11 @@ export default function Workflow() {
         </div>
 
         {/* Workflow Steps */}
-        <div className="grid gap-8 lg:grid-cols-3">
+        <div className="grid md:gap-4 gap-8 lg:grid-cols-3">
           {steps.map((step, index) => (
-            <div
-              key={index}
-              className="rounded-3xl bg-[#F1F5F8] p-8 !sticky top-20 h-[500px] md:mb-0 mb-[16rem]"
+            <motion.div
+              style={{ scale }}
+              className="rounded-3xl bg-[#F1F5F8] p-8 h-[500px] md:mb-0 mb-[10rem]"
             >
               {/* Icon */}
               <div className="relative mb-6">
@@ -76,7 +89,7 @@ export default function Workflow() {
                 )}
 
                 {index === 2 && step.showPushButton && (
-                  <div className="">
+                  <div>
                     <img
                       src="/images/workflow3.png"
                       alt=""
@@ -85,7 +98,7 @@ export default function Workflow() {
                   </div>
                 )}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
