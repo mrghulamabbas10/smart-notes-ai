@@ -72,7 +72,7 @@ const SiriOrb = ({
           "--animation-duration": `${animationDuration}s`,
           "--blur-amount": `${blurAmount}px`,
           "--contrast-amount": finalContrast,
-          "--dot-size": `${dotSize}px`,
+          // "--dot-size": `${dotSize}px`,
           "--shadow-spread": `${shadowSpread}px`,
           "--mask-radius": maskRadius
         }

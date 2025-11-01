@@ -1,4 +1,5 @@
-import MainLayout from "@/components/ui/MainLayout";
+ 
+import MainLayout from "@/components/dashboard/MainLayout";
 import React from "react";
 
 export default function Layout({ children }) {

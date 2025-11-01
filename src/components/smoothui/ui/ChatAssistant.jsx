@@ -1,13 +1,13 @@
 import React from "react"; 
-import SiriOrb from "../smoothui/ui/SiriOrb";
+import SiriOrb from "./SiriOrb";
 
 const ChatAssistant = () => {
   return (
     <div className="flex justify-center items-center h-screen">
       <SiriOrb
         size="256px"
-        animationDuration={15}
-        colors={{ bg: "#0f172a", c1: "#38bdf8", c2: "#818cf8", c3: "#a78bfa" }}
+        animationDuration={30}
+       colors={{ bg: "#0f172a", c1: "#C7DAFF", c2: "#5C8FFF", c3: "#1E5EFF" }}
         className="drop-shadow-lg"
       />
     </div>

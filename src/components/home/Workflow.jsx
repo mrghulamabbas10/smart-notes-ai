@@ -35,6 +35,7 @@ export default function Workflow() {
         <div className="grid md:gap-4 gap-8 lg:grid-cols-3">
           {steps.map((step, index) => (
             <motion.div
+              key={index}
               style={{ scale }}
               className="rounded-3xl bg-[#F1F5F8] p-8 h-[500px] md:mb-0 mb-[10rem]"
             >

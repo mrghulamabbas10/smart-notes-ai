@@ -1,6 +1,5 @@
 "use client";
-
-import Header from "../home/Header";
+ 
 import ContactSection from "./ContactSection";
 
 import { motion } from "framer-motion";

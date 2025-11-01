@@ -1,7 +1,6 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
-import Header from "../home/Header";
+import { useRef } from "react"; 
 
 export default function AboutHero() {
   const ref = useRef(null);

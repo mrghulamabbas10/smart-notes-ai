@@ -6,7 +6,7 @@ export default function BlueGradientBanner() {
       className="relative py-16 md:py-20 lg:py-28 px-4 md:px-8"
       style={{
         background:
-          "url('https://api.builder.io/api/v1/image/assets/TEMP/76eddce5966d3c5faaf02900ef86860c60e23c3e?width=2886') lightgray 50% / cover no-repeat",
+          "url('/images/blue-bg.png?width=2886') lightgray 50% / cover no-repeat",
       }}
     >
       <div className="max-w-5xl mx-auto text-center">

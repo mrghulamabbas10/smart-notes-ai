@@ -1,4 +1,4 @@
-import NewEncounterForm from "@/components/ui/NewEncounterForm";
+import NewEncounterForm from "@/components/dashboard/NewEncounterForm";
 
 export default function Page() {
   return (

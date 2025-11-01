@@ -1,8 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import { FiSearch } from "react-icons/fi";
+import { motion, AnimatePresence } from "framer-motion"; 
 import DeleteIcon from "../assets/delet";
 import SearchWithButton from "./SearchWithButton";
 import CurveIcon from "../assets/Curve";
