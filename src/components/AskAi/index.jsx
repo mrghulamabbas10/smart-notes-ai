@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import MyOrb from "../ui/AIGlop";
 
 export default function AskAI() {
   const [isListening, setIsListening] = useState(true);
@@ -60,7 +61,7 @@ export default function AskAI() {
 
       <div className="flex-1 flex flex-col items-center justify-center relative pb-8">
         <div className="relative w-full max-w-md aspect-square flex items-center justify-center mb-8 sm:mb-12">
-          <div className="absolute inset-0 flex items-center justify-center">
+          {/* <div className="absolute inset-0 flex items-center justify-center">
             <div
               className="w-[280px] h-[240px] sm:w-[310px] sm:h-[270px] rounded-full bg-gradient-orb blur-[114px] animate-pulse-slow"
               style={{
@@ -78,7 +79,8 @@ export default function AskAI() {
               className="w-[280px] h-[280px]"
               unoptimized
             />
-          </div>
+          </div> */}
+           <MyOrb/>
         </div>
 
         <p className="text-center text-[15px] text-[#474747] font-medium leading-[26px] max-w-[325px] mb-8 px-4">
