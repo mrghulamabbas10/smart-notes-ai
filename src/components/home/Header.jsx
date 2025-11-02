@@ -38,7 +38,7 @@ export default function Header() {
       <nav
         className={`fixed w-full left-1/2 -translate-x-1/2 z-50  px-4 sm:px-6 lg:px-20 md:pt-4 pt-3 transition-all duration-300 ${
           scrolled
-            ? " md:py-3 py-2"
+            ? "bg-white shadow-md md:py-3 py-2"
             : "bg-transparent md:py-4 py-3"
         }`}
       >
