@@ -111,7 +111,7 @@ export default function ContactSection() {
               <input
                 type="email"
                 name="email"
-                placeholder="smart_05@yopmail.com"
+                placeholder="Enter your email"
                 value={formData.email}
                 onChange={handleInputChange}
                 className="w-full h-10 rounded-xl border border-[#3C82F3] bg-[rgba(223,237,246,0.2)] px-4 font-urbanist text-xs text-[#747474] placeholder:text-[#747474] focus:outline-none"
@@ -138,7 +138,7 @@ export default function ContactSection() {
               type="submit"
               className="w-full h-[60px] bg-[#2066FF] hover:bg-[#1457EA] transition-colors rounded-[9px] font-urbanist font-semibold text-white text-[15px] shadow-md"
             >
-              Create Account
+              Send Message
             </button>
           </form>
         </div>

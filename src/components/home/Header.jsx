@@ -42,7 +42,7 @@ export default function Header() {
             : "bg-transparent md:py-4 py-3"
         }`}
       >
-        <Link href="/" className="md:-ml-5 -ml-3 block">
+        <Link href="/" className="md:-ml-6 -ml-3 block">
           <Image
             src="/images/nav-logo.png"
             alt="nav-logo"

@@ -35,7 +35,7 @@ const pricingPlans = [
       "30-Day Free Trial",
     ],
     ctaText: "Start Premium Plan",
-    featured: false,
+    featured: true,
     badge: null,
   },
   {
@@ -53,7 +53,7 @@ const pricingPlans = [
       "Discounted Price for Each User",
     ],
     ctaText: "Start your Practice Plan",
-    featured: true,
+    featured: false,
     badge: "Upto 20% Off",
   },
 ];
@@ -88,7 +88,7 @@ export function Pricing() {
                   : "bg-white border border-[#DEDEDE]"
               }`}
             >
-              {plan.featured && index === 2 && (
+              {plan.featured && index === 1 && (
                 <div className="absolute -top-16 md:right-0 right-5 flex items-center gap-2">
                   <img
                     src="/images/onlyarrow.png?width=160"

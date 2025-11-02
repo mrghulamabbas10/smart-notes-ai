@@ -35,7 +35,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://api.builder.io/api/v1/image/assets/TEMP/fd72e36943bf40025f4529e03abb650aca4206ac?width=2884"
+          src="/images/hero-bg.png?width=2884"
           alt=""
           className="h-full w-full object-cover opacity-50"
         />
@@ -43,7 +43,7 @@ export default function Hero() {
       {/* Hero Content */}
       <HomeSlider />
       {/* Scroll Scale Hero Image */}
-      <div className="px-4 sm:px-6 lg:px-8 relative z-20 mx-auto max-w-7xl -mt-10 mb-5">
+      <div className="px-4 sm:px-6 lg:px-8 relative z-20 mx-auto max-w-7xl -mt-20 mb-5">
         <img src="/images/header-logo.png" alt="" className="w-[7rem]" />
       </div>
 

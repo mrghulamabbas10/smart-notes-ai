@@ -35,9 +35,9 @@ export default function HomeSlider() {
   }, []);
 
   return (
-    <div className="relative z-10 lg:pt-32 pt-28 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
+    <div className="relative lg:h-[600px] z-10 lg:pt-32 pt-28 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
       {/* LEFT CONTENT (STATIC NOW) */}
-      <div className="flex flex-col justify-center lg:h-[430px]">
+      <div className="flex flex-col justify-center lg:h-[430px] lg:mt-7">
         <h1 className="lg:text-6xl lg:leading-[65px] md:text-3xl text-[11vw] md:leading-tight leading-[11vw] font-bold text-[#00234B] mb-2">
           Transforming
           <br /> <span className="text-primary">
@@ -68,19 +68,19 @@ export default function HomeSlider() {
       </div>
 
       {/* RIGHT IMAGE (ONLY THIS PART ANIMATES) */}
-      <div className="relative mx-auto p-2 ">
+      <div className="relative ml-auto p-2 ">
         <AnimatePresence mode="wait">
           <motion.img
             key={slides[current].image}
             src={slides[current].image}
             alt="Hero Image"
-            className="h-full w-full object-cover rounded-3xl"
+            className={`h-full w-full ml-auto object-cover rounded-3xl  
+            ${current ===0 ? "lg:h-[380px]" : ""} 
+            ${current === 1 ? "lg:h-[500px] ml-auto" : ""} 
+            ${current === 2 ? "lg:h-[430px]" : ""} 
+              `}
             initial={{ scale: 1, opacity: 0 }}
-            animate={
-              !isMobile && current === 0
-                ? { scale: 1.15, opacity: 1 } // scale only on first image (desktop)
-                : { scale: 1, opacity: 1 } // normal fade for mobile or others
-            }
+            animate={({ scale: 1, opacity: 1 }, { scale: 1, opacity: 1 })}
             exit={{ scale: 1.1, opacity: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           />

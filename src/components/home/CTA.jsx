@@ -11,25 +11,29 @@ export function CTA() {
             <img src="/images/mini-arrow.png" alt="" className="w-[15vw]" />
           </div>
 
-          <h2 className="text-3xl lg:text-[48px] font-bold text-white leading-tight">
+        <div>
+            <h2 className="text-3xl lg:text-[48px] font-bold text-white leading-tight mb-2">
             Start Your Smart Note Taking Journey Today!
           </h2>
 
           <p className="text-base text-white/80 leading-relaxed max-w-[484px]">
-            Manage your Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt — all in one intuitive app.
+            Fully Secure and HIPPA compliant
           </p>
+        </div>
 
-          <button className="px-11 py-5 rounded-full border border-white bg-gradient-to-tr from-[#FFFFFF] to-[#1457EA] backdrop-blur-sm text-brand-blue-dark font-bold text-base hover:shadow-lg transition-all duration-300">
-            Try it for Free
-          </button>
+          <div>
+            <button className="px-11 py-5 rounded-full border border-white bg-gradient-to-tr from-[#FFFFFF] to-[#1457EA] backdrop-blur-sm text-brand-blue-dark font-bold text-base hover:shadow-lg transition-all duration-300">
+              Try it for Free
+            </button>
+            <p className="text-white mt-1 italic">No credit card required</p>
+          </div>
         </div>
 
         <div className="block md:absolute bottom-0 right-0">
           <img
             src="/images/StartYourSmartNote.png?width=854"
             alt="Hand holding smartphone"
-            className="w-full md:h-[450px] h-auto"
+            className="w-full md:h-[430px] h-auto"
           />
         </div>
       </div>

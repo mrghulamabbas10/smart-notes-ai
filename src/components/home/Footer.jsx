@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Facebook from "../assets/facebook";
 import Instagram from "../assets/Instagram";
 import Linkedin from "../assets/Linkedin";
@@ -28,26 +29,35 @@ export function Footer() {
           </div>
 
           <div className="space-y-4">
-            <h4 className="text-lg lg:text-xl font-medium mb-4">Contact Us</h4>
-            <div className="space-y-2 text-sm lg:text-base text-[#DCE2E3]">
-              <p>www.smartnotesai.com</p>
-              <p>info@genmeditech.com</p>
-              <p>+1 914-930-6264</p>
-            </div>
-
-            <div className="pt-6">
-              <h4 className="text-lg lg:text-xl font-medium mb-4">Address</h4>
+            <div className="space-y-4">
+              <h4 className="text-lg lg:text-xl font-medium mb-4">Security</h4>
               <p className="text-sm lg:text-base text-[#DCE2E3]">
-                WestWood, New Jersey
+                SmartNotes AI is HIPAA compliant
               </p>
+            </div>
+            <div className="pt-6">
+              <h4 className="text-lg lg:text-xl font-medium mb-4">
+                Contact Us
+              </h4>
+              <div className="space-y-2 text-sm lg:text-base text-[#DCE2E3]">
+                <p>www.smartnotesai.com</p>
+                <p>info@genmeditech.com</p>
+                <p>+1 914-930-6264</p>
+              </div>
             </div>
           </div>
 
-          <div className="space-y-4">
-            <h4 className="text-lg lg:text-xl font-medium mb-4">Security</h4>
+          <div className="">
+            <h4 className="text-lg lg:text-xl font-medium mb-4">Address</h4>
             <p className="text-sm lg:text-base text-[#DCE2E3]">
-              SmartNotes AI is HIPAA compliant
+              WestWood, New Jersey
             </p>
+            <Link href="#" className="underline block mt-4 mb-2">
+              Privacy Policy
+            </Link>
+            <Link href="#" className="underline block">
+              Terms of Service
+            </Link>
           </div>
 
           <div className="space-y-4">
@@ -80,6 +90,7 @@ export function Footer() {
           </div>
         </div>
       </div>
+      <div className="border-t border-white/50 text-center py-5 mt-5">Copyright © 2025 SmartNotes AI.</div>
     </footer>
   );
 }
