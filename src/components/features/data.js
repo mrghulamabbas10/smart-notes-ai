@@ -181,7 +181,7 @@ export const UsefulFeatureData = [
         </g>
         <rect x="18" y="17" width="60" height="60" rx="14" fill="#009DFF" />
         <mask
-          id="mask0_2102_3" 
+          id="mask0_2102_3"
           maskUnits="userSpaceOnUse"
           x="23"
           y="26"
@@ -303,16 +303,10 @@ export const UsefulFeatureData = [
   },
 ];
 
-
-
 export const features = [
   {
     tag: "Notes",
-    title: (
-      <>
-        SOAP and Followup Note
-      </>
-    ),
+    title: <>SOAP and Followup Note</>,
     description:
       "Our AI based solution generate note including Chief Complaint, HPI and Review of system from the encounter.",
     points: [
@@ -327,7 +321,7 @@ export const features = [
     tag: "Medical Billing",
     title: (
       <>
-        Automated Medical <br /> Billing Information
+        Automated Billing and <br /> Reimbursement Information
       </>
     ),
     description:
@@ -343,11 +337,7 @@ export const features = [
   },
   {
     tag: "Visit Summary",
-    title: (
-      <>
-        Clean Patient Summaries
-      </>
-    ),
+    title: <>Clean Patient Summaries</>,
     description:
       "Create shareable Patient encounter summaries which include Key Findings, Recommendations, Follow-up instruction and Patient guidance etc.",
     points: [
