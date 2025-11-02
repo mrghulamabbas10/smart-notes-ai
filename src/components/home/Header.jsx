@@ -34,52 +34,54 @@ export default function Header() {
   ];
 
   return (
-    <div>
+    <div className="">
       <nav
-        className={`fixed w-full left-1/2 -translate-x-1/2 z-50 flex items-center justify-between px-4 sm:px-6 lg:px-20 md:pt-4 pt-3 transition-all duration-300 ${
+        className={`fixed w-full left-1/2 -translate-x-1/2 z-50  px-4 sm:px-6 lg:px-20 md:pt-4 pt-3 transition-all duration-300 ${
           scrolled
-            ? "bg-white shadow-md md:py-3 py-2"
+            ? " md:py-3 py-2"
             : "bg-transparent md:py-4 py-3"
         }`}
       >
-        <Link href="/" className="md:-ml-6 -ml-3 block">
-          <Image
-            src="/images/nav-logo.png"
-            alt="nav-logo"
-            width={133}
-            height={74}
-            className="md:w-[133px] md:h-[74px] w-[100px] h-[80px] object-contain"
-          />
-        </Link>
+        <div className="mx-auto max-w-7xl flex items-center justify-between  2xl:px-9" >
+          <Link href="/" className="md:-ml-6 -ml-3 block">
+            <Image
+              src="/images/nav-logo.png"
+              alt="nav-logo"
+              width={133}
+              height={74}
+              className="md:w-[133px] md:h-[74px] w-[100px] h-[80px] object-contain"
+            />
+          </Link>
 
-        {/* Center Menu - Desktop */}
-        <div className="glassmorphic lg:flex hidden items-center gap-4 rounded-full border border-white px-8 py-3 opacity-90 backdrop-blur-sm sm:gap-6 lg:gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="font-fustat text-sm font-semibold text-[#464E68] transition hover:text-[#1457EA] sm:text-base"
+          {/* Center Menu - Desktop */}
+          <div className="glassmorphic lg:flex hidden items-center gap-4 rounded-full border border-white px-8 py-3 opacity-90 backdrop-blur-sm sm:gap-6 lg:gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="font-fustat text-sm font-semibold text-[#464E68] transition hover:text-[#1457EA] sm:text-base"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Login + Mobile Menu */}
+          <div>
+            <button
+              className={`glassmorphic-light hidden md:block rounded-full border px-8 py-3 font-fustat text-sm font-semibold text-[#00234B] transition hover:bg-white/80 sm:right-6 lg:right-8  ${
+                scrolled ? "border-[#00234B]" : "border-white"
+              }`}
             >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-
-        {/* Login + Mobile Menu */}
-        <div>
-          <button
-            className={`glassmorphic-light hidden md:block rounded-full border px-8 py-3 font-fustat text-sm font-semibold text-[#00234B] transition hover:bg-white/80 sm:right-6 lg:right-8  ${
-              scrolled ? "border-[#00234B]" : "border-white"
-            }`}
-          >
-            Login
-          </button>
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className={`block lg:hidden text-[#00234B] border-white border p-2 rounded  `}
-          >
-            <Menu size={24} />
-          </button>
+              Login
+            </button>
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className={`block lg:hidden text-[#00234B] border-white border p-2 rounded  `}
+            >
+              <Menu size={24} />
+            </button>
+          </div>
         </div>
       </nav>
 

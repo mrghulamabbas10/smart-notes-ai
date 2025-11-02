@@ -68,7 +68,7 @@ export default function HomeSlider() {
       </div>
 
       {/* RIGHT IMAGE (ONLY THIS PART ANIMATES) */}
-      <div className="relative ml-auto p-2 ">
+      <div className="relative ml-auto p-2">
         <AnimatePresence mode="wait">
           <motion.img
             key={slides[current].image}
