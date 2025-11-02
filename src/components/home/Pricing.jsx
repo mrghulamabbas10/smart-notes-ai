@@ -25,7 +25,7 @@ const pricingPlans = [
     description:
       "Perfect for solo physicians and healthcare professionals. Get the most out of SmartNotes AI. Unlimited sessions mean more value, more freedom, and no restrictions on how often you streamline your clinical documentation.",
     price: "$89",
-    period: "/pricing",
+    period: "/month",
     features: [
       "Unlimited Sessions",
       "SOAP + Consult Notes",
